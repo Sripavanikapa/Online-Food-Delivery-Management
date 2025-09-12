@@ -3,31 +3,40 @@ using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Interfaces;
 using Microsoft.Extensions.Logging;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Infrastructure.Repositories
 {
     public class DeliveryServices: IDelivery
     {
-        public DeliveryDto GetDeliveryByOrderId(int id)
+        public DeliveryDto GetDeliveryDetailsByOrderId(int id, string CustAddress)
         {
             DeliveryDto delivery = null;
 
             using (SqlConnection conn = SqlConn.GetConnection())
             {
-                string query = "SELECT * FROM Delivery WHERE order_id = @OrderId";
+                string query = "getDeliveryDetailsByOrderId";
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@OrderId", id);
+                cmd.Parameters.AddWithValue("@CustAddress", CustAddress);
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
                     delivery = new DeliveryDto
                     {
+
                         DeliveryId = Convert.ToInt32(reader["delivery_id"]),
                         OrderId = Convert.ToInt32(reader["order_id"]),
-                        Status = (bool)reader["status"],
-                        AgentId = Convert.ToInt32(reader["agent_id"])
+                        restaurantName = reader["RestaurantName"].ToString(),
+                        restaurantAddress = reader["RestaurantAddress"].ToString(),
+                        customerName = reader["CustName"].ToString(),
+                        customerAddress = reader["CustAddress"].ToString(),
+                        Status = Convert.ToBoolean(reader["status"])
+
                     };
                 }
                 reader.Close();
@@ -35,43 +44,27 @@ namespace Infrastructure.Repositories
             return delivery;
         }
 
-        public List<DeliveryDto> GetDeliveriesByAgentId(int AgentId)
+        //for allocating
+        public List<DeliveryAgentDto> GetAvailableAgents()
         {
-            var deliveries = new List<DeliveryDto>();
-
+            List<DeliveryAgentDto> agents = new List<DeliveryAgentDto>();
             using (SqlConnection conn = SqlConn.GetConnection())
             {
-                string query = "SELECT * FROM Delivery WHERE agent_id = @AgentId";
+                string query = "Select agent_id, status from delivery_agent where status=1";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@AgentId", AgentId);
                 SqlDataReader reader = cmd.ExecuteReader();
-
                 while (reader.Read())
                 {
-                    deliveries.Add(new DeliveryDto
+                    agents.Add(new DeliveryAgentDto
                     {
-                        DeliveryId = Convert.ToInt32(reader["delivery_id"]),
-                        OrderId = Convert.ToInt32(reader["order_id"]),
-                        Status = (bool)reader["status"],
-                        AgentId = Convert.ToInt32(reader["agent_id"])
+                        AgentId = Convert.ToInt32(reader["agent_id"]),
+                        //Status =(bool) reader["status"]
                     });
                 }
-                return deliveries;
-
             }
+            return agents;
         }
 
-        public bool UpdateDeliveryStatus(int DeliveryId)
-        {
-            using (SqlConnection conn = SqlConn.GetConnection())
-            {
-                string query = "Update delivery set status =1 where delivery_id=@id";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id",DeliveryId);
-                cmd.ExecuteNonQuery();
-            }
-            return true;
-        }
     }
 }
 

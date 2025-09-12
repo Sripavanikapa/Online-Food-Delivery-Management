@@ -10,7 +10,8 @@ namespace Infrastructure.Interfaces
 {
     public interface IDeliveryAgent
     {
-        List<DeliveryAgentDto> GetAvailableAgents();
+        List<DeliveryDto> GetDeliveriesByAgentId(int AgentId);
+        bool UpdateDeliveryStatus(int DeliveryId);
 
     }
 }

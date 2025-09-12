@@ -1,10 +1,13 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration.UserSecrets;
-namespace Infrastructure.JWT
+namespace JWT.Logic
 {
     public class TokenGeneration
     {
@@ -14,7 +17,7 @@ namespace Infrastructure.JWT
             _configuration = configuration;
         }
 
-        public string GenerateJWT(string userId, string role)
+        public string GenerateJWT(string userId,string role)
         {
 
             //Form Security Key and Credential
@@ -27,21 +30,20 @@ namespace Infrastructure.JWT
             {
                 new Claim(JwtRegisteredClaimNames.Sub,userId),
                 new Claim(ClaimTypes.Role,role),
-                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()) //Unique Id
-               
+                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()), //Unique Id
             };
 
             //Define the Token Object
             var token = new JwtSecurityToken(
 
-                  issuer: "souravmaitra.com",
-                  audience: "Interns",
-                  claims: claims,
-                  expires: DateTime.Now.AddHours(1),
-                  signingCredentials: securityCredentials
+                  issuer:"souravmaitra.com",
+                  audience:"Interns",
+                  claims:claims,
+                  expires:DateTime.Now.AddHours(1),
+                  signingCredentials:securityCredentials
                 );
             var tokenS = new JwtSecurityTokenHandler();
-            return tokenS.WriteToken(token);
+           return tokenS.WriteToken(token);
         }
     }
 }

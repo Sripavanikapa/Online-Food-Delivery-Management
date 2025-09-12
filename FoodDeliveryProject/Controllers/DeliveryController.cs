@@ -17,10 +17,11 @@ namespace FoodDeliveryProject.Controllers
             _deliveryService = new DeliveryServices();
         }
 
-        [HttpGet("order/{orderId}")]
-        public ActionResult<Delivery> GetDeliveryByOrderId(int orderId)
+        //for delivery agent
+        [HttpGet("DeliveryDetailsByOrderId/{orderId}")]
+        public ActionResult<DeliveryDto> GetDeliveryDetailsByOrderId(int orderId, string CustAddress)
         {
-            var delivery = _deliveryService.GetDeliveryByOrderId(orderId);
+            var delivery = _deliveryService.GetDeliveryDetailsByOrderId(orderId, CustAddress);
             if (delivery == null)
             {
                 return NotFound($"No delivery found for Order ID: {orderId}");
@@ -28,26 +29,15 @@ namespace FoodDeliveryProject.Controllers
             return Ok(delivery);
         }
 
-        [HttpGet("agent/{AgentId}")]
-        public ActionResult<List<Delivery>> GetDeliveriesByAgentId(int AgentId)
+        [HttpGet("AvailableAgents")]
+        public ActionResult<List<DeliveryAgentDto>> GetAvailableAgents()
         {
-            var deliveries = _deliveryService.GetDeliveriesByAgentId(AgentId);
-            if (deliveries == null)
+            var agents = _deliveryService.GetAvailableAgents();
+            if (agents == null)
             {
-                return NotFound($"No delivery found for Agent ID: {AgentId}");
+                return NotFound("No delivery agents found.");
             }
-            return Ok(deliveries);
-        }
-
-        [HttpPut]
-        public ActionResult UpdateDeliveryStatus(int DeliveryId)
-        { 
-            var status=_deliveryService.UpdateDeliveryStatus(DeliveryId);
-            if(!status)
-            {
-                return BadRequest("");
-            }
-            return Ok(status);
+            return agents;
         }
 
     }

@@ -10,9 +10,9 @@ namespace Infrastructure.Interfaces
 {
     public interface IDelivery
     {
-        DeliveryDto GetDeliveryByOrderId(int id);
-        List<DeliveryDto> GetDeliveriesByAgentId(int AgentId);
-        bool UpdateDeliveryStatus(int DeliveryId);
+        DeliveryDto GetDeliveryDetailsByOrderId(int id, string CustAddress);
+        List<DeliveryAgentDto> GetAvailableAgents();
+
 
     }
 }

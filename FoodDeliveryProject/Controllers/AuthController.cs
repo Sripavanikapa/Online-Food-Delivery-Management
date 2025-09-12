@@ -1,12 +1,9 @@
-﻿using Infrastructure.JWT;
-using Infrastructure;
+﻿using JWT.Logic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -28,29 +25,10 @@ namespace FoodDeliveryProject.Controllers
             {
                 return BadRequest("Invalid credentials");
             }
-            #region Unused Code
-
-            //// Generate JWT Token
-            //var tokenHandler = new JwtSecurityTokenHandler();
-            //var key = _configuration.GetValue<string>("ApiSettings:Secret");
-            //var keyBytes = Encoding.ASCII.GetBytes(key);
-            //var tokenDescriptor = new SecurityTokenDescriptor
-            //{
-            //    Subject = new ClaimsIdentity(new Claim[]
-            //    {
-            //        new Claim(ClaimTypes.Name, username)
-            //    }),
-            //    Expires = DateTime.UtcNow.AddHours(1),
-            //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(keyBytes), SecurityAlgorithms.HmacSha256Signature)
-            //};
-            //var token = tokenHandler.CreateToken(tokenDescriptor);
-            //var tokenString = tokenHandler.WriteToken(token);
-
-            #endregion
 
             // Check DB Object and validate
             TokenGeneration jwtTokenString = new TokenGeneration(_configuration);
-            string tokenString = jwtTokenString.GenerateJWT(username, "Admin");
+        string tokenString = jwtTokenString.GenerateJWT(username, "Admin");
             return Ok(new { Token = tokenString });
         }
     }

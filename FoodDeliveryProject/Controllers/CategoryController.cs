@@ -18,7 +18,7 @@ namespace FoodDeliveryProject.Controllers
             _categoryService= new CategoryService();
         }
 
-        [HttpGet("categories")]
+        [HttpGet("AllCategories")]
         public ActionResult<List<string>> GetAllCategories()
         {
             List<string> categories = _categoryService.GetAllCategories();
@@ -28,7 +28,7 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(categories);
         }
-        [HttpPost]
+        [HttpPost("AddCategory")]
         public ActionResult AddCategory([FromBody] CategoryDto catagoryDto) { 
             var category=_categoryService.AddCategory(catagoryDto);
             if (category == null)
