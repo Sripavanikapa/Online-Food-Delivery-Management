@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Domain.DTO;
 using Domain.Models;
-using Domain.DTO;
+using FoodDeliveryProject.Repositories;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -69,6 +70,18 @@ namespace FoodDeliveryProject.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("RestaurantWithFoodItems")]
+        public IActionResult RestaurantWithThereFoodItems()
+        {
+            var result = userServices.RestaurantWithThereFoodItems();
+            if (result == null || !result.Any())
+            {
+                return NotFound(new { message = "no restaurants found" });
+            }
+            return Ok(result);
+        }
 
 
     }

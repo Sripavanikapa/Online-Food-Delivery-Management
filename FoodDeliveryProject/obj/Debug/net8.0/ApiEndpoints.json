@@ -594,6 +594,16 @@
   },
   {
     "ContainingType": "FoodDeliveryProject.Controllers.UserController",
+    "Method": "RestaurantWithThereFoodItems",
+    "RelativePath": "api/User/RestaurantWithFoodItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodDeliveryProject.Controllers.UserController",
     "Method": "UpdateUser",
     "RelativePath": "api/User/update/user",
     "HttpMethod": "PUT",

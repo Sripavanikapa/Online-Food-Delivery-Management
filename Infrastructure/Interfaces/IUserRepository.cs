@@ -13,6 +13,7 @@ namespace Infrastructure.Interfaces
         UserDto UpdateUser(int id, UserDto user);
 
         bool DeleteUser(int id);
+        public List<RestaurantWithFoodDto> RestaurantWithThereFoodItems();
         //IEnumerable<AddressDto> GetAddressesByUserId(int userId);
 
 

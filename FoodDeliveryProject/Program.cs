@@ -31,8 +31,9 @@ namespace FoodDeliveryProject
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<UserServices>();
-            builder.Services.AddScoped<AddressServices>();
+         
+            builder.Services.AddScoped<IAddress,AddressServices>();
+            builder.Services.AddScoped<IFoodItems,FoodItemServices>();
             builder.Services.AddScoped<IAdmin,AdminImplementation>();
             builder.Services.AddScoped<IRestaurant,RestaurantImplementation>();
             builder.Services.AddScoped<IUserRepository, UserServices>();

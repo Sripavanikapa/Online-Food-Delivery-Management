@@ -333,6 +333,43 @@
         }
       }
     },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "username": {
+                  "style": "form"
+                },
+                "password": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Category/categories": {
       "get": {
         "tags": [
@@ -1025,6 +1062,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/RestaurantWithFoodItems": {
+      "get": {
+        "tags": [
+          "User"
         ],
         "responses": {
           "200": {

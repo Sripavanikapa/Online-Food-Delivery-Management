@@ -1018,3 +1018,4 @@ C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanage
 C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanagement\FoodDeliveryProject\obj\Debug\net8.0\FoodDeli.633FC541.Up2Date
 C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanagement\FoodDeliveryProject\obj\Debug\net8.0\FoodDeliveryProject.genruntimeconfig.cache
 C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanagement\FoodDeliveryProject\obj\Debug\net8.0\ref\FoodDeliveryProject.dll
+C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\FoodDeliveryProject\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

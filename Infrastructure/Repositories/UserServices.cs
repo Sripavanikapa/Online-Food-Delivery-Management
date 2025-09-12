@@ -3,6 +3,7 @@ using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 
 namespace Infrastructure.Repositories
@@ -94,6 +95,33 @@ namespace Infrastructure.Repositories
                 return true;
             }
             return false;
+        }
+
+        public List<RestaurantWithFoodDto> RestaurantWithThereFoodItems()
+        {
+            var restaurants = _context.Restaurants
+                .Include(r => r.FoodItems)
+                .Include(r => r.User)
+                .ToList();
+
+            return restaurants.Select(r => new RestaurantWithFoodDto
+            {
+                RestaurantId = r.RestaurantId,
+                OwnerName = r.User?.Name ?? "Unknown",
+                Status = r.Status,
+                FoodItems = r.FoodItems != null && r.FoodItems.Any()
+                    ? r.FoodItems.Select(f => new FoodItemDtoForRestaurant
+                    {
+                        ItemId = f.ItemId,
+                        ItemName = f.ItemName ?? string.Empty,
+                        Price = f.Price,
+                        Rating = f.Rating,
+                        Description = f.Description ?? string.Empty,
+                        Keywords = f.Keywords ?? string.Empty,
+                        Status = f.Status
+                    }).ToList()
+                    : "No food item"
+            }).ToList();
         }
 
     }
