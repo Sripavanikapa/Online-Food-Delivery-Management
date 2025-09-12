@@ -2,7 +2,6 @@
 using Domain.Data;
 using Infrastructure.Repositories;
 using Infrastructure.Interfaces;
-using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
@@ -39,6 +38,10 @@ namespace FoodDeliveryProject
             builder.Services.AddScoped<IUserRepository, UserServices>();
             builder.Services.AddScoped<IDeliveryAgent, DeliveryAgentService>();
             builder.Services.AddScoped<IDelivery, DeliveryServices>();
+            builder.Services.AddScoped<IReview, ReviewService>();
+            builder.Services.AddScoped<IOrder, OrderService>();
+            builder.Services.AddScoped<IOrderItem, OrderItemService>();
+
 
             var app = builder.Build();
 
