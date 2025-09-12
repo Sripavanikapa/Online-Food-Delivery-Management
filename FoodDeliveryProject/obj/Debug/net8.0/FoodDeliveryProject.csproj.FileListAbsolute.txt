@@ -748,3 +748,4 @@ C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\FoodDeliveryProject\b
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\FoodDeliveryProject\bin\Debug\net8.0\Domain.pdb
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\FoodDeliveryProject\bin\Debug\net8.0\Infrastructure.pdb
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\FoodDeliveryProject\bin\Debug\net8.0\Testing.pdb
+C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\FoodDeliveryProject\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -95,6 +95,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FoodDeliveryProject.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FoodDeliveryProject.Controllers.CategoryController",
     "Method": "AddCategory",
     "RelativePath": "api/Category",
@@ -353,75 +374,6 @@
         "Name": "keywords",
         "Type": "System.String",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FoodDeliveryProject.Controllers.OrderController",
-    "Method": "AddingOrder",
-    "RelativePath": "api/Order/AddingordersbyId/{userid}/{restaurantid}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "restaurantId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FoodDeliveryProject.Controllers.OrderController",
-    "Method": "GetOrderByorderId",
-    "RelativePath": "api/Order/GetOrderbyorderId /{Id} ",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FoodDeliveryProject.Controllers.OrderController",
-    "Method": "GetOrderByrestaurantId",
-    "RelativePath": "api/Order/GetOrderbyrestaurantId /{Id} ",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FoodDeliveryProject.Controllers.OrderController",
-    "Method": "GetOrderByUserId",
-    "RelativePath": "api/Order/GetOrderbyUserId /{Id} ",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []
