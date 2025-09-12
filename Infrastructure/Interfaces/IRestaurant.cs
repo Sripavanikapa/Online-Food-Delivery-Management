@@ -7,7 +7,7 @@ namespace FoodDeliveryProject.Repositories
 {
     public interface IRestaurant
     {
-        List<Restaurant> GetRestaurants();
+        List<string> GetRestaurants();
         RestaurantDto AddRestaurant(RestaurantCreateDto restaurantCreateDto);
 
         RestaurantDto GetRestaurantById(int id);

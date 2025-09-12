@@ -18,10 +18,22 @@ namespace FoodDeliveryProject.Repositories
            
             this.appDbContext = appDbContext;
         }
-        public List<Restaurant> GetRestaurants()
+        //public List<RestaurantDto> GetRestaurants()
+        //{
+        //    return appDbContext.Restaurants.Select(r => new RestaurantDto
+        //    {
+        //        OwnerName = r.User.Name
+        //    }
+        //    ).ToList();
+        //}
+        public List<string> GetRestaurants()
         {
-            return appDbContext.Restaurants.ToList();
+            return appDbContext.Restaurants
+                .Select(r => r.User.Name)
+                .Distinct()
+                .ToList();
         }
+
         public RestaurantDto AddRestaurant(RestaurantCreateDto restaurantCreateDto)
         {
             var user = appDbContext.Users.Find(restaurantCreateDto.UserId);
