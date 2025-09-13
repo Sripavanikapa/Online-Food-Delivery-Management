@@ -169,7 +169,7 @@
   {
     "ContainingType": "FoodDeliveryProject.Controllers.CategoryController",
     "Method": "AddCategory",
-    "RelativePath": "api/Category",
+    "RelativePath": "api/Category/AddCategory",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -185,7 +185,7 @@
   {
     "ContainingType": "FoodDeliveryProject.Controllers.CategoryController",
     "Method": "GetAllCategories",
-    "RelativePath": "api/Category/categories",
+    "RelativePath": "api/Category/AllCategories",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -204,37 +204,15 @@
   },
   {
     "ContainingType": "FoodDeliveryProject.Controllers.DeliveryController",
-    "Method": "UpdateDeliveryStatus",
-    "RelativePath": "api/Delivery",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "DeliveryId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FoodDeliveryProject.Controllers.DeliveryController",
-    "Method": "GetDeliveriesByAgentId",
-    "RelativePath": "api/Delivery/agent/{AgentId}",
+    "Method": "GetAvailableAgents",
+    "RelativePath": "api/Delivery/AvailableAgents",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "AgentId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Domain.Models.Delivery, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Domain.DTO.DeliveryAgentDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -246,8 +224,8 @@
   },
   {
     "ContainingType": "FoodDeliveryProject.Controllers.DeliveryController",
-    "Method": "GetDeliveryByOrderId",
-    "RelativePath": "api/Delivery/order/{orderId}",
+    "Method": "GetDeliveryDetailsByOrderId",
+    "RelativePath": "api/Delivery/DeliveryDetailsByOrderId/{orderId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -256,11 +234,16 @@
         "Name": "orderId",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "CustAddress",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Domain.Models.Delivery",
+        "Type": "Domain.DTO.DeliveryDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
