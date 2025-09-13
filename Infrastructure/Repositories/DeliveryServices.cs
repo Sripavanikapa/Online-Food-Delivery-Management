@@ -44,26 +44,7 @@ namespace Infrastructure.Repositories
             return delivery;
         }
 
-        //for allocating
-        public List<DeliveryAgentDto> GetAvailableAgents()
-        {
-            List<DeliveryAgentDto> agents = new List<DeliveryAgentDto>();
-            using (SqlConnection conn = SqlConn.GetConnection())
-            {
-                string query = "Select agent_id, status from delivery_agent where status=1";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    agents.Add(new DeliveryAgentDto
-                    {
-                        AgentId = Convert.ToInt32(reader["agent_id"]),
-                        //Status =(bool) reader["status"]
-                    });
-                }
-            }
-            return agents;
-        }
+        
 
     }
 }

@@ -75,5 +75,15 @@
     "C:\\Users\\2440011\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\2440011\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

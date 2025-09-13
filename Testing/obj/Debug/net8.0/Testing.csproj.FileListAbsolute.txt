@@ -298,6 +298,7 @@ C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanage
 C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanagement\Testing\obj\Debug\net8.0\Testing.pdb
 C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanagement\Testing\obj\Debug\net8.0\Testing.genruntimeconfig.cache
 C:\Users\2440012\OneDrive - Cognizant\Desktop\FinalFood\OnlineFoodDeliverymanagement\Testing\obj\Debug\net8.0\ref\Testing.dll
+<<<<<<< HEAD
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -306,3 +307,13 @@ C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\Testing\bin\Debug\net
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+=======
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\2440159\source\repos\FoodDeliveryManagement\OnlineFoodDeliverymanagement\Testing\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+>>>>>>> 0bce1bb3a18ef7c16d93c149175d4f0ea7c385a3

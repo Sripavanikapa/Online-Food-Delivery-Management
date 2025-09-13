@@ -110,7 +110,7 @@ namespace Infrastructure.Repositories
             {
                 AgentId=u.AgentId,
                
-                Status=u.Status
+                //Status=u.Status
             }).ToList();
         }
 

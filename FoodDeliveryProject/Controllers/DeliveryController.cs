@@ -29,16 +29,7 @@ namespace FoodDeliveryProject.Controllers
             return Ok(delivery);
         }
 
-        [HttpGet("AvailableAgents")]
-        public ActionResult<List<DeliveryAgentDto>> GetAvailableAgents()
-        {
-            var agents = _deliveryService.GetAvailableAgents();
-            if (agents == null)
-            {
-                return NotFound("No delivery agents found.");
-            }
-            return agents;
-        }
+       
 
     }
 }

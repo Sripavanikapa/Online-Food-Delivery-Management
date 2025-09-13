@@ -12,6 +12,6 @@ namespace Infrastructure.Interfaces
     {
         List<DeliveryDto> GetDeliveriesByAgentId(int AgentId);
         bool UpdateDeliveryStatus(int DeliveryId);
-
+        List<DeliveryAgentDto> GetAvailableAgents();
     }
 }

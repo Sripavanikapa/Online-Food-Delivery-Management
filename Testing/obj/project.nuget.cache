@@ -26,5 +26,15 @@
     "C:\\Users\\2440011\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
     "C:\\Users\\2440011\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
