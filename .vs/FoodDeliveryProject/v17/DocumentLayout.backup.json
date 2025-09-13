@@ -237,8 +237,7 @@
               "RelativeToolTip": "FoodDeliveryProject\\Controllers\\DeliveryAgentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:05:55.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T11:05:55.015Z"
             },
             {
               "$type": "Document",
@@ -250,8 +249,7 @@
               "RelativeToolTip": "Infrastructure\\Repositories\\DeliveryServices.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAWwA4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T10:23:41.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T10:23:41.898Z"
             },
             {
               "$type": "Document",
@@ -263,8 +261,7 @@
               "RelativeToolTip": "Infrastructure\\Repositories\\DeliveryAgentService.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAQwAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:02:50.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T11:02:50.497Z"
             },
             {
               "$type": "Document",
@@ -272,9 +269,9 @@
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets \u2B24",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets \u2B24",
-              "ViewState": "AgIAADgWAAAAAAAAAAAhwD8WAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAADsWAAAAAAAAAAAuwEsWAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-09-13T10:24:21.903Z",
               "EditorCaption": ""
@@ -289,8 +286,7 @@
               "RelativeToolTip": "Domain\\DTO\\DeliveryAgentDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:38:19.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T05:38:19.156Z"
             },
             {
               "$type": "Document",
@@ -302,8 +298,7 @@
               "RelativeToolTip": "Domain\\ADO\\SqlConnection.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:59:32.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T09:59:32.3Z"
             },
             {
               "$type": "Document",
@@ -315,8 +310,7 @@
               "RelativeToolTip": "FoodDeliveryProject\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-12T12:17:52.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:17:52.767Z"
             },
             {
               "$type": "Document",
