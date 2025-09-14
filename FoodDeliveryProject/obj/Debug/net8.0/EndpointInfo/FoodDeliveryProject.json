@@ -12,12 +12,11 @@
         ],
         "parameters": [
           {
-            "name": "CustId",
+            "name": "Phno",
             "in": "query",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           },
           {
@@ -43,7 +42,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "addressid",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -51,12 +50,11 @@
             }
           },
           {
-            "name": "CustId",
+            "name": "Phno",
             "in": "query",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           },
           {
@@ -75,19 +73,17 @@
         }
       }
     },
-    "/api/Address/get/addresses/{custId}": {
+    "/api/Address/get/addresses": {
       "get": {
         "tags": [
           "Address"
         ],
         "parameters": [
           {
-            "name": "custId",
-            "in": "path",
-            "required": true,
+            "name": "phno",
+            "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -98,7 +94,7 @@
         }
       }
     },
-    "/api/Address/delete/address/{id}": {
+    "/api/Address/delete/address": {
       "delete": {
         "tags": [
           "Address"
@@ -106,8 +102,7 @@
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -166,7 +161,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/UserDto"
+                    "$ref": "#/components/schemas/AdminUser"
                   }
                 }
               },
@@ -174,7 +169,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/UserDto"
+                    "$ref": "#/components/schemas/AdminUser"
                   }
                 }
               },
@@ -182,7 +177,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/UserDto"
+                    "$ref": "#/components/schemas/AdminUser"
                   }
                 }
               }
@@ -338,31 +333,22 @@
         "tags": [
           "Auth"
         ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "username": {
-                    "type": "string"
-                  },
-                  "password": {
-                    "type": "string"
-                  }
-                }
-              },
-              "encoding": {
-                "username": {
-                  "style": "form"
-                },
-                "password": {
-                  "style": "form"
-                }
-              }
+        "parameters": [
+          {
+            "name": "Phoneno",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -662,14 +648,6 @@
             }
           },
           {
-            "name": "rating",
-            "in": "query",
-            "schema": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          {
             "name": "category_id",
             "in": "query",
             "schema": {
@@ -737,14 +715,6 @@
           },
           {
             "name": "price",
-            "in": "query",
-            "schema": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          {
-            "name": "rating",
             "in": "query",
             "schema": {
               "type": "number",
@@ -1106,13 +1076,6 @@
             }
           },
           {
-            "name": "IsValid",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
             "name": "Role",
             "in": "query",
             "schema": {
@@ -1134,14 +1097,6 @@
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
             "name": "Name",
             "in": "query",
             "schema": {
@@ -1161,16 +1116,23 @@
             "schema": {
               "type": "string"
             }
-          },
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/get/alladdress/users": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
           {
-            "name": "IsValid",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "Role",
+            "name": "phno",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1184,19 +1146,17 @@
         }
       }
     },
-    "/api/User/get/alladdress/users/{id}": {
+    "/api/User/getorders": {
       "get": {
         "tags": [
           "User"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
+            "name": "phno",
+            "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -1207,42 +1167,17 @@
         }
       }
     },
-    "/api/User/getorders/{userid}": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "parameters": [
-          {
-            "name": "userid",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/User/delete/user/{id}": {
+    "/api/User/delete/user": {
       "delete": {
         "tags": [
           "User"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
+            "name": "Phno",
+            "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -1266,6 +1201,27 @@
           "restaurantId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdminUser": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "isValid": {
+            "type": "boolean"
+          },
+          "phoneno": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1370,32 +1326,20 @@
           }
         },
         "additionalProperties": false
-      },
-      "UserDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "phoneno": {
-            "type": "string",
-            "nullable": true
-          },
-          "isValid": {
-            "type": "boolean"
-          },
-          "role": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme (Example: 'Bearer 12345abcdef')",
+        "name": "Authorization",
+        "in": "header"
       }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

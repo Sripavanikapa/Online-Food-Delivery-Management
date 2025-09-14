@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Domain.Models;
 using Domain.DTO;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -17,48 +18,49 @@ namespace FoodDeliveryProject.Controllers
         {
             this.userServices = userServices;
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult CreateUser([FromQuery] UserDto userDto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+           
             var createdUser = userServices.CreateUser(userDto);
+            if (createdUser==null)
+            {
+                return NotFound("You dont have access to create admin");
+            }
             return Ok(createdUser);
         }
 
         [HttpPut("update/user")]
-        public IActionResult UpdateUser([FromQuery] int id, [FromQuery] UserDto userDto)
+        public IActionResult UpdateUser([FromQuery] UpdateUserDto userDto)
         {
             if (!ModelState.IsValid)
             {
                 return NotFound("User Updation Cannot be done");
             }
-            var updatedUser = userServices.UpdateUser(id, userDto);
+            var updatedUser = userServices.UpdateUser(userDto);
             return Ok(updatedUser);
         }
 
-        [HttpGet("get/alladdress/users/{id}")]
-        public IActionResult GetAllUsers(int id)
+        [HttpGet("get/alladdress/users")]
+        public IActionResult GetAllUsers([FromQuery]string phno)
         {
-            IEnumerable<Address> address = userServices.GetAddressesByUserId(id);
+            IEnumerable<Address> address = userServices.GetAddressesByUserId(phno);
             return Ok(address);
         }
 
 
-        [HttpGet("getorders/{userid}")]
-        public IActionResult GetOrdersByUser(int userid)
+        [HttpGet("getorders")]
+        public IActionResult GetOrdersByUser([FromQuery]string phno)
         {
-            IEnumerable<OrderedItemsByUserDto> orders = userServices.GetOrdersByUserId(userid);
+            IEnumerable<OrderedItemsByUserDto> orders = userServices.GetOrdersByUserId(phno);
             return Ok(orders);
         }
 
-        [HttpDelete("delete/user/{id}")]
-        public IActionResult DeleteUser(int id)
+        [HttpDelete("delete/user")]
+        public IActionResult DeleteUser([FromQuery] string Phno)
         {
-            bool isDeleted = userServices.DeleteUser(id);
+            bool isDeleted = userServices.DeleteUser(Phno);
             if (isDeleted)
             {
                 return Ok("User deleted successfully.");

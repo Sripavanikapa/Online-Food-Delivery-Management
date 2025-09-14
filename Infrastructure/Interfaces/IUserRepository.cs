@@ -6,13 +6,13 @@ namespace Infrastructure.Interfaces
     public interface IUserRepository
     {
         public UserDto CreateUser(UserDto user);
-        IEnumerable<OrderedItemsByUserDto> GetOrdersByUserId(int userId);
+        IEnumerable<OrderedItemsByUserDto> GetOrdersByUserId(string phno);
 
-        public IEnumerable<Address> GetAddressesByUserId(int userId);
+        public IEnumerable<Address> GetAddressesByUserId(string phno);
 
-        UserDto UpdateUser(int id, UserDto user);
+        UpdateUserDto UpdateUser(UpdateUserDto user);
 
-        bool DeleteUser(int id);
+        bool DeleteUser(string phno);
         //IEnumerable<AddressDto> GetAddressesByUserId(int userId);
 
 

@@ -26,7 +26,7 @@ namespace Infrastructure.Repositories
 
         List<DeliveryAgentDto> getDeliveryAgents();
 
-        List<UserDto> getCustomers();
+        List<AdminUser> getCustomers();
 
     }
 }

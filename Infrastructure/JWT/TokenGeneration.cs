@@ -1,49 +1,88 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.Extensions.Configuration.UserSecrets;
-namespace JWT.Logic
+using Domain.DTO;
+
+namespace Infrastructure.JWT
 {
     public class TokenGeneration
     {
         private readonly IConfiguration _configuration;
-        public TokenGeneration(IConfiguration configuration)
+        private readonly AppDbContext _dbContext;
+     
+        public TokenGeneration(IConfiguration configuration, AppDbContext dbContext)
         {
             _configuration = configuration;
+            _dbContext = dbContext;
         }
 
-        public string GenerateJWT(string userId,string role)
+        public async Task<LoginResponseDto?> Authenticate(LoginDto request)
         {
-
-            //Form Security Key and Credential
-            var key = _configuration.GetValue<string>("ApiSettings:Secret");
-            var securedKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
-            var securityCredentials = new SigningCredentials(securedKey, SecurityAlgorithms.HmacSha256);
-
-            //Define Claims with a List of Claims 
-            var claims = new List<Claim>()
+            if (string.IsNullOrWhiteSpace(request.Phoneno) || string.IsNullOrWhiteSpace(request.Password))
             {
-                new Claim(JwtRegisteredClaimNames.Sub,userId),
-                new Claim(ClaimTypes.Role,role),
-                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()), //Unique Id
+                return null;
+
+            }
+            var userAccount = await _dbContext.Users.FirstOrDefaultAsync(x => x.Phoneno == request.Phoneno);
+
+            if (userAccount == null)
+                return null;
+
+            bool passcheck;
+
+           
+                passcheck = request.Password == userAccount.Password;
+            
+            
+
+            if (!passcheck)
+                return null;
+
+            var issuer = _configuration["JwtConfig:Issuer"];
+            var audience = _configuration["JwtConfig:Audience"];
+            var key = _configuration["JwtConfig:Key"];
+            var tokenValidityMins = _configuration.GetValue<int>("JwtConfig:TokenValidityMins");
+            var tokenExpiryTimeStamp = DateTime.UtcNow.AddMinutes(tokenValidityMins);
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+             new Claim(JwtRegisteredClaimNames.Name, request.Phoneno),
+             new Claim(ClaimTypes.Role, userAccount.Role.ToString()),
+             new Claim(ClaimTypes.NameIdentifier, userAccount.Id.ToString())
+
+         }
+                ),
+                Expires = tokenExpiryTimeStamp,
+                Issuer = issuer,
+                Audience = audience,
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
+                SecurityAlgorithms.HmacSha512Signature),
+
             };
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var securityToken = tokenHandler.CreateToken(tokenDescriptor);
+            var accessToken = tokenHandler.WriteToken(securityToken);
+            return new LoginResponseDto
+            {
+                AccessToken = accessToken,
+                PhnoPasswordCredential = request.Phoneno,
+                ExpiresIn = (int)tokenExpiryTimeStamp.Subtract(DateTime.UtcNow).TotalSeconds,
+                Role = userAccount.Role.ToString(),
+                Id = userAccount.Id,
+                Phoneno = userAccount.Phoneno
 
-            //Define the Token Object
-            var token = new JwtSecurityToken(
 
-                  issuer:"souravmaitra.com",
-                  audience:"Interns",
-                  claims:claims,
-                  expires:DateTime.Now.AddHours(1),
-                  signingCredentials:securityCredentials
-                );
-            var tokenS = new JwtSecurityTokenHandler();
-           return tokenS.WriteToken(token);
+
+
+            };
         }
+
+
     }
 }

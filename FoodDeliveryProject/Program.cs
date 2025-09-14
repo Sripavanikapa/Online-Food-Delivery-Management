@@ -1,11 +1,16 @@
 
 using Domain.Data;
-using Infrastructure.Repositories;
+using FoodDeliveryProject.Repositories;
 using Infrastructure.Interfaces;
+using Infrastructure.JWT;
+using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using FoodDeliveryProject.Repositories;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace FoodDeliveryProject
 {
@@ -30,8 +35,9 @@ namespace FoodDeliveryProject
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<UserServices>();
-            builder.Services.AddScoped<AddressServices>();
+            builder.Services.AddScoped<IUserRepository,UserServices>();
+            builder.Services.AddScoped<IFoodItems, FoodItemServices>();
+            builder.Services.AddScoped<IAddress,AddressServices>();
             builder.Services.AddScoped<IAdmin,AdminImplementation>();
             builder.Services.AddScoped<IRestaurant,RestaurantImplementation>();
             builder.Services.AddScoped<IUserRepository, UserServices>();
@@ -40,6 +46,63 @@ namespace FoodDeliveryProject
             builder.Services.AddScoped<IReview, ReviewService>();
             builder.Services.AddScoped<IOrder, OrderService>();
             builder.Services.AddScoped<IOrderItem, OrderItemService>();
+            builder.Services.AddScoped<TokenGeneration>();
+
+            var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            })
+                .AddJwtBearer(options =>
+                {
+                    options.RequireHttpsMetadata = false;
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["JwtConfig:Key"])),
+                        ValidateIssuer = true,
+                        ValidateAudience = false,
+                        ValidIssuer = builder.Configuration["JwtConfig:Issuer"],
+                        ValidAudience = builder.Configuration["JwtConfig:Audience"],
+                        ValidateLifetime = true,
+                    };
+                });
+            builder.Services.AddSwaggerGen(
+                c =>
+                {
+                    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                    {
+                        Description = "JWT Authorization header using the Bearer scheme (Example: 'Bearer 12345abcdef')",
+                        Name = "Authorization",
+                        In = ParameterLocation.Header,
+                        Type = SecuritySchemeType.ApiKey,
+                        Scheme = "Bearer"
+                    });
+
+                    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                            {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Scheme = "bearer",
+                            Name = "Authorization",
+                            In = ParameterLocation.Header
+                        },
+                        new List<string>()
+                    }
+                            });
+                });
+            builder.Services.AddAuthorization();
+
 
 
             var app = builder.Build();
@@ -52,7 +115,7 @@ namespace FoodDeliveryProject
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

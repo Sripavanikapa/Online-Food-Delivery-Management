@@ -14,8 +14,6 @@ namespace Domain.DTO
 
         public decimal price { get; set; }
 
-        public decimal rating { get; set; }
-
         public int category_id { get; set; }
 
         public bool status { get; set; }

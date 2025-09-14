@@ -4,6 +4,7 @@ using Domain.Models;
 
 using FoodDeliveryProject.Repositories;
 using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 namespace FoodDeliveryProject.Controllers
@@ -18,7 +19,7 @@ namespace FoodDeliveryProject.Controllers
             this.admin = admin;
             
         }
-
+        [Authorize]
         [HttpGet("/TotalUsers")]
         public ActionResult<int> getAllUsersCount()
         {
@@ -30,9 +31,11 @@ namespace FoodDeliveryProject.Controllers
         //public ActionResult<List<UserDto>> getUsersByRole(string role)
         //{
         //    return admin.getUsersByRole(role);
+
         //}
+        [Authorize]
         [HttpGet("/getCustomers")]
-        public ActionResult<List<UserDto>> GetCustomers()
+        public ActionResult<List<AdminUser>> GetCustomers()
         {
             var Customers = admin.getCustomers();
             if (Customers == null)
@@ -41,6 +44,7 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(Customers);
         }
+        [Authorize(Roles = "admin")]
         [HttpGet("/getRestaurants")]
         public  ActionResult<List<RestaurantDto>> GetRestaurants()
         {
@@ -52,6 +56,7 @@ namespace FoodDeliveryProject.Controllers
             return Ok(restaurants);
         }
         [HttpPut]
+        [Authorize(Roles = "admin")]
         [Route("ApproverOrBlockUser/{id}/{isValid}")]
         public IActionResult ApproverOrBlockRestaurant([FromRoute] int id, [FromRoute] bool isValid)
         {
@@ -73,7 +78,7 @@ namespace FoodDeliveryProject.Controllers
         //    }
         //    return Ok(new { message = "Successfully Deleted that restaurant" });
         //}
-
+        [Authorize(Roles = "admin")]
         [HttpDelete]
         [Route("user/{id}")]
         public IActionResult DeleteUser([FromRoute] int id)
@@ -85,6 +90,7 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(new { message = "User successfully Deleted" });
         }
+        [Authorize(Roles = "admin")]
         [HttpGet]
         [Route("ordersSummary")]
         public ActionResult<List<RestaurantOrderSummaryDto>> GetOrdersCountByRestaurant()
@@ -106,6 +112,7 @@ namespace FoodDeliveryProject.Controllers
         //    }
         //    return Ok("status updated successfully");
         //}
+        [Authorize(Roles = "admin")]
         [HttpGet("getAllDeliveryAgents")]
         public IActionResult getDeliveryAgents()
         {

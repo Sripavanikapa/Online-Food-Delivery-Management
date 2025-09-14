@@ -114,10 +114,10 @@ namespace Infrastructure.Repositories
             }).ToList();
         }
 
-        public List<UserDto> getCustomers()
+        public List<AdminUser> getCustomers()
         {
             var Customers = appDbContext.Users.Where(u => u.Role == "Customer")
-                .Select(x => new UserDto
+                .Select(x => new AdminUser
                 {
                     
                     Name = x.Name,

@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.DTO
 {
-    public class AddressDto
+    public class LoginDto
     {
-
-        public required string Phno { get; set; }
-
-        public required string Address1 { get; set; }
-
+      
+        public string Phoneno { get; set; }
+        public string Password { get; set; }
     }
 }

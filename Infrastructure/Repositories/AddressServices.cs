@@ -3,6 +3,7 @@ using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Interfaces;
 using System.Linq;
+using System.Net;
 namespace Infrastructure.Repositories
 {
     public class AddressServices : IAddress
@@ -15,37 +16,40 @@ namespace Infrastructure.Repositories
         
         
         // Add a new address
-        public AddressDto CreateAddress(AddressDto address)
+        public string CreateAddress(AddressDto address)
         {
+            var custId = _context.Users
+                .Where(u => u.Phoneno == address.Phno)
+                .Select(u => u.Id)
+                .FirstOrDefault();
             var newAddress = new Address
             {
-                CustId = address.CustId,
+                CustId = custId,
                 Address1 = address.Address1
             };
             _context.Addresses.Add(newAddress);
             _context.SaveChanges();
-            return new AddressDto
-            {
-                CustId = newAddress.CustId,
-                Address1 = newAddress.Address1
-            };
+
+            return newAddress.Address1;
+            
         }
 
        //Update address
-        public AddressDto UpdateAddress(int addressid,AddressDto address)
+        public string UpdateAddress(int addressid,AddressDto address)
         {
+            var custId = _context.Users
+               .Where(u => u.Phoneno == address.Phno)
+               .Select(u => u.Id)
+               .FirstOrDefault();
             var existingAddress = _context.Addresses.Find(addressid);
             if (existingAddress != null)
             {
-                existingAddress.CustId = address.CustId;
+               
                 existingAddress.Address1 = address.Address1;
                
                 _context.SaveChanges();
-                return new AddressDto
-                {
-                    CustId = existingAddress.CustId,
-                    Address1 = existingAddress.Address1
-                };
+
+                return existingAddress.Address1;
             }
             return null;
             
@@ -54,16 +58,20 @@ namespace Infrastructure.Repositories
 
         // Get addresses by customer ID
 
-        public List<Address> GetAddressesByCustomerId(int custId) {
+        public List<Address> GetAddressesByPhno(string phno) {
 
+            var custId = _context.Users
+               .Where(u => u.Phoneno == phno)
+               .Select(u => u.Id)
+               .FirstOrDefault();
             return _context.Addresses.Where(a => a.CustId == custId).ToList();
             
 
         }
         
-        public bool DeleteAddressById(int custid)
+        public bool DeleteAddressById(int addressid)
         {
-            var address = _context.Addresses.FirstOrDefault(a => a.CustId == custid);
+            var address = _context.Addresses.Find(addressid);
             if (address != null)
             {
                 _context.Addresses.Remove(address);

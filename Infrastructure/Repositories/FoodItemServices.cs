@@ -36,7 +36,7 @@ namespace Infrastructure.Repositories
                 RestaurantId = fooditem.restaurant_id,
                 ItemName = fooditem.item_name,
                 Price = fooditem.price,
-                Rating = fooditem.rating,
+                Rating = 0,
                 CategoryId = fooditem.category_id,
                 Status = fooditem.status,
                 Description = fooditem.Description,
@@ -54,7 +54,7 @@ namespace Infrastructure.Repositories
                 restaurant_id = food.RestaurantId,
                 item_name = food.ItemName,
                 price = food.Price,
-                rating = food.Rating,
+               
                 category_id = food.CategoryId,
                 status = food.Status,
                 Description = food.Description,
@@ -83,7 +83,7 @@ namespace Infrastructure.Repositories
                 food.RestaurantId = fooditem.restaurant_id;
                 food.ItemName = fooditem.item_name;
                 food.Price = fooditem.price;
-                food.Rating = fooditem.rating;
+              
                 food.CategoryId = fooditem.category_id;
                 food.Status = fooditem.status;
                 food.Description = fooditem.Description;
@@ -95,7 +95,7 @@ namespace Infrastructure.Repositories
                     restaurant_id = food.RestaurantId,
                     item_name = food.ItemName,
                     price = food.Price,
-                    rating = food.Rating,
+                  
                     category_id = food. CategoryId,
                     status = food.Status,
                     Description = food.Description,

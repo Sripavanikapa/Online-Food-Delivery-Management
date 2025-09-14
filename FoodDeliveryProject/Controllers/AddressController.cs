@@ -34,23 +34,23 @@ namespace FoodDeliveryProject.Controllers
 
         //update a address
         [HttpPut("update/address")] 
-        public IActionResult UpdateAddress([FromQuery] int id,[FromQuery] AddressDto address)
+        public IActionResult UpdateAddress([FromQuery] int addressid,[FromQuery] AddressDto address)
         {
             if (!ModelState.IsValid)
             {
                 return NotFound(ModelState);
             }
-            var updatedAddress = _address.UpdateAddress(id,address);
+            var updatedAddress = _address.UpdateAddress(addressid,address);
             return Ok(updatedAddress);
         }
 
 
         //get addresses by customer id
-        [HttpGet("get/addresses/{custId}")]
+        [HttpGet("get/addresses")]
 
-        public ActionResult GetAddressesByCustomerId(int custId)
+        public ActionResult GetAddressesByCustomerId([FromQuery]string phno)
         {
-            var addresses = _address.GetAddressesByCustomerId(custId);
+            var addresses = _address.GetAddressesByPhno(phno);
             if (addresses == null || addresses.Count == 0)
             {
                 return NotFound("No addresses found for the provided customer ID");
@@ -60,8 +60,8 @@ namespace FoodDeliveryProject.Controllers
 
         //delete address by id
 
-        [HttpDelete("delete/address/{id}")]
-        public ActionResult DeleteAddressById(int id)
+        [HttpDelete("delete/address")]
+        public ActionResult DeleteAddressById([FromQuery]int id)
         {
             var result = _address.DeleteAddressById(id);
             if (result == false)

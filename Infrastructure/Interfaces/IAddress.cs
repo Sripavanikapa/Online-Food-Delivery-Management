@@ -10,12 +10,12 @@ namespace Infrastructure.Interfaces
 {
     public interface IAddress
     {
-        AddressDto CreateAddress(AddressDto addressDto);
-        List<Address> GetAddressesByCustomerId(int custId);
+        string CreateAddress(AddressDto addressDto);
+        List<Address> GetAddressesByPhno(string phno);
 
-        AddressDto UpdateAddress(int id, AddressDto addressDto);
+        string UpdateAddress( int addid,AddressDto addressDto);
 
-        bool DeleteAddressById(int custid);
+        bool DeleteAddressById(int addressid);
 
     }
 }
