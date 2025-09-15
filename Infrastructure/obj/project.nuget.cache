@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F8zDjY5HLSs=",
+  "dgSpecHash": "y/xXcZN8u8s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2440011\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\2440011\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
