@@ -40,6 +40,8 @@ namespace FoodDeliveryProject
             builder.Services.AddScoped<IReview, ReviewService>();
             builder.Services.AddScoped<IOrder, OrderService>();
             builder.Services.AddScoped<IOrderItem, OrderItemService>();
+            builder.Services.Configure<TwilioSettings>(builder.Configuration.GetSection("Twilio"));
+            builder.Services.AddScoped<ISmsService, SmsService>();
 
 
             var app = builder.Build();

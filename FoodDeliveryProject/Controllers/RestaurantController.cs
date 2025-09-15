@@ -1,6 +1,5 @@
 ﻿using Domain.DTO;
-
-
+using Domain.Models;
 using FoodDeliveryProject.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -101,7 +100,15 @@ namespace FoodDeliveryProject.Controllers
         //    return Ok(restaurantWithThatRole);
         //}
 
-
-
+        [HttpGet("open-restaurants")]
+        public ActionResult<List<RestaurantDto>> GetOpenRestaurants()
+        {
+            var restaurants=restaurant.GetOpenRestaurants();
+            if (restaurants == null || restaurants.Count == 0)
+            {
+                return NotFound("No open Restaurants available");
+            }
+            return Ok(restaurants);
+        }
     }
 }

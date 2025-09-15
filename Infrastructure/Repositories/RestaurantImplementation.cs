@@ -131,6 +131,21 @@ namespace FoodDeliveryProject.Repositories
                     : "No food item"
             }).ToList();
         }
+        public List<RestaurantDto> GetOpenRestaurants()
+        {
+            var restaurants = appDbContext.Restaurants
+                .FromSqlRaw("SELECT restaurant_id, status FROM Restaurant WHERE status = 'true'")
+                .Select(r => new RestaurantDto
+                {
+                    RestaurantId = r.RestaurantId,
+                    Status = r.Status,
+                    OwnerName=r.User.Name
+                })
+                .ToList();
+
+            return restaurants;
+        }
+
 
 
     }

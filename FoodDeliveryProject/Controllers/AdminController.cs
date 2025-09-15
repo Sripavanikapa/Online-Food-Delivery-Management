@@ -116,5 +116,22 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(deliveryAgents);
         }
+        [HttpPut("{id}/{isValid}/approve")]
+        public async Task<IActionResult> ApproveUser(int id,bool isValid)
+        {
+            try
+            {
+                await admin.ApproveUserAsync(id,isValid);
+                return Ok(new { message = "User approved and SMS sent" });
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (Exception ex) {
+                return StatusCode(500, ex.Message);
+            
+            }
+        }
     }
 }
