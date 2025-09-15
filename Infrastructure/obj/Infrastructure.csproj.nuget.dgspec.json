@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj": {
+    "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\2440011\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\2440005\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\2440011\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\2440005\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -93,20 +94,20 @@
         }
       }
     },
-    "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\2440011\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\2440005\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\2440011\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\2440005\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,17 +116,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj"
+              "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
-                "projectPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj"
+              "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
+                "projectPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj"
               }
             }
           }
@@ -153,6 +155,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.9, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.9, )"
             }
           },
           "imports": [
@@ -175,20 +181,20 @@
         }
       }
     },
-    "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
+    "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
+        "projectUniqueName": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
         "projectName": "Testing",
-        "projectPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
-        "packagesPath": "C:\\Users\\2440011\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\obj\\",
+        "projectPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
+        "packagesPath": "C:\\Users\\2440005\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\2440011\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\2440005\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -197,6 +203,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

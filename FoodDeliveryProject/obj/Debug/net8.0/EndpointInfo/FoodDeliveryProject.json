@@ -597,6 +597,37 @@
         }
       }
     },
+    "/api/Deliveryy/eta-customer-agent": {
+      "post": {
+        "tags": [
+          "Deliveryy"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryETARequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryETARequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryETARequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/FoodItem/GetFoodItemsByKeywords": {
       "get": {
         "tags": [
@@ -1275,6 +1306,20 @@
           },
           "status": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryETARequest": {
+        "type": "object",
+        "properties": {
+          "customerAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "agentAddress": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

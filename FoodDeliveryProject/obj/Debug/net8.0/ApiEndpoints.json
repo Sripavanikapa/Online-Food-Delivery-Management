@@ -306,6 +306,22 @@
     ]
   },
   {
+    "ContainingType": "FoodDeliveryProject.Controllers.DeliveryyController",
+    "Method": "GetETAForDelivery",
+    "RelativePath": "api/Deliveryy/eta-customer-agent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Domain.Models.DeliveryETARequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FoodDeliveryProject.Controllers.FoodItemController",
     "Method": "AddFoodItems",
     "RelativePath": "api/FoodItem/addfooditems",

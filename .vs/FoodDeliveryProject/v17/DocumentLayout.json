@@ -1,158 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\",
+  "WorkspaceRootPath": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44B3FE1A-652E-4A0C-8B99-ECD318631DAE}|Testing\\Testing.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\testing\\servicestesting\\userregistertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44B3FE1A-652E-4A0C-8B99-ECD318631DAE}|Testing\\Testing.csproj|solutionrelative:testing\\servicestesting\\userregistertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440005\\source\\repos\\onlinefooddeliverymanagement\\fooddeliveryproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\fooddeliveryproject\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\fooddeliveryproject\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\fooddeliveryproject\\controllers\\deliveryagentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\controllers\\deliveryagentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\fooddeliveryproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440005\\source\\repos\\onlinefooddeliverymanagement\\fooddeliveryproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440005\\source\\repos\\onlinefooddeliverymanagement\\domain\\models\\deliveryetarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\deliveryetarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\iaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\iaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\repositories\\addressservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\addressservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\fooditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\fooditemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\iadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\iadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\repositories\\restaurantimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\restaurantimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\irestaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\irestaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\restaurantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\restaurantdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\repositories\\deliveryagentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\deliveryagentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\ideliveryagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\ideliveryagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\ifooditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\ifooditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\idelivery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\idelivery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\fooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\fooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\delivery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\delivery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\ado\\sqlconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\ado\\sqlconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\ordereditemsbyuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\ordereditemsbyuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\foodbykeywordss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\foodbykeywordss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\deliveryagentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\deliveryagentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\deliveryagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\deliveryagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\domain\\dto\\restaurantcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\restaurantcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440011\\source\\repos\\onlinefooddeliverymanagement\\onlinefooddeliverymanagement\\fooddeliveryproject\\fooddeliveryproject.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\fooddeliveryproject.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{44B3FE1A-652E-4A0C-8B99-ECD318631DAE}|Testing\\Testing.csproj|c:\\users\\2440005\\source\\repos\\onlinefooddeliverymanagement\\testing\\servicestesting\\userregistertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44B3FE1A-652E-4A0C-8B99-ECD318631DAE}|Testing\\Testing.csproj|solutionrelative:testing\\servicestesting\\userregistertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -162,12 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -175,461 +35,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserRegisterTest.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\ServicesTesting\\UserRegisterTest.cs",
-              "RelativeDocumentMoniker": "Testing\\ServicesTesting\\UserRegisterTest.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Testing\\ServicesTesting\\UserRegisterTest.cs",
-              "RelativeToolTip": "Testing\\ServicesTesting\\UserRegisterTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Program.cs",
+              "RelativeDocumentMoniker": "FoodDeliveryProject\\Program.cs",
+              "ToolTip": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Program.cs",
+              "RelativeToolTip": "FoodDeliveryProject\\Program.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T10:35:04.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddressController.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\AddressController.cs",
-              "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\AddressController.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\AddressController.cs",
-              "RelativeToolTip": "FoodDeliveryProject\\Controllers\\AddressController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAkwEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T10:33:06.508Z",
+              "WhenOpened": "2025-09-15T12:50:44.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "FoodDeliveryProject\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Title": "DeliveryETARequest.cs",
+              "DocumentMoniker": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\Models\\DeliveryETARequest.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\DeliveryETARequest.cs",
+              "ToolTip": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Domain\\Models\\DeliveryETARequest.cs",
+              "RelativeToolTip": "Domain\\Models\\DeliveryETARequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T10:31:16.189Z",
+              "WhenOpened": "2025-09-15T12:45:12.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\appsettings.json",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\appsettings.json",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\appsettings.json",
+              "ToolTip": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\appsettings.json",
               "RelativeToolTip": "FoodDeliveryProject\\appsettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwBcAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-13T14:41:33.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UserDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\UserDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UserDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:34:54.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AddressServices.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\AddressServices.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\AddressServices.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\AddressServices.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\AddressServices.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAgwDwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T03:50:57.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IAddress.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IAddress.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IAddress.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IAddress.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IAddress.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:23:13.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AddressDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\AddressDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\AddressDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\AddressDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\AddressDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:38:15.826Z"
+              "WhenOpened": "2025-09-15T12:42:29.445Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DeliveryAgentController.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\DeliveryAgentController.cs",
-              "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\DeliveryAgentController.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\DeliveryAgentController.cs",
-              "RelativeToolTip": "FoodDeliveryProject\\Controllers\\DeliveryAgentController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBUAAABGAAAAAAAAAA==",
+              "Title": "UserRegisterTest.cs",
+              "DocumentMoniker": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\ServicesTesting\\UserRegisterTest.cs",
+              "RelativeDocumentMoniker": "Testing\\ServicesTesting\\UserRegisterTest.cs",
+              "ToolTip": "C:\\Users\\2440005\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\ServicesTesting\\UserRegisterTest.cs",
+              "RelativeToolTip": "Testing\\ServicesTesting\\UserRegisterTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:05:55.015Z",
+              "WhenOpened": "2025-09-15T10:35:04.882Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\LoginResponseDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\LoginResponseDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T05:26:47.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\LoginDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T05:23:55.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UpdateUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UpdateUserDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\UpdateUserDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UpdateUserDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\UpdateUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T14:56:55.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\User.cs",
-              "RelativeToolTip": "Domain\\Models\\User.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:20:08.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FoodItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\FoodItemDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\FoodItemDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\FoodItemDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\FoodItemDto.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwA4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:47:46.133Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IAdmin.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IAdmin.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IAdmin.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IAdmin.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvxwAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:59:56.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminUser.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\AdminUser.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\AdminUser.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\AdminUser.cs",
-              "RelativeToolTip": "Domain\\DTO\\AdminUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T15:13:48.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IRestaurant.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IRestaurant.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IRestaurant.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IRestaurant.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IRestaurant.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAIwAkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:01:25.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "RestaurantImplementation.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAMwB4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:05:26.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RestaurantDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\RestaurantDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\RestaurantDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:46:52.137Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Restaurant.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Restaurant.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Restaurant.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Restaurant.cs",
-              "RelativeToolTip": "Domain\\Models\\Restaurant.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:29:11.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DeliveryAgentService.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\DeliveryAgentService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\DeliveryAgentService.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\DeliveryAgentService.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\DeliveryAgentService.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwA8AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:02:50.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IDeliveryAgent.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IDeliveryAgent.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IDeliveryAgent.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IDeliveryAgent.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IDeliveryAgent.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAewAwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:39:13.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IFoodItems.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IFoodItems.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IFoodItems.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IFoodItems.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IFoodItems.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:31:53.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IDelivery.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IDelivery.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IDelivery.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IDelivery.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IDelivery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:39:14.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FoodItem.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\FoodItem.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\FoodItem.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\FoodItem.cs",
-              "RelativeToolTip": "Domain\\Models\\FoodItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T10:39:45.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Category.cs",
-              "RelativeToolTip": "Domain\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:39:04.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Delivery.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Delivery.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Delivery.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Delivery.cs",
-              "RelativeToolTip": "Domain\\Models\\Delivery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:39:03.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "OrderedItemsByUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\OrderedItemsByUserDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\OrderedItemsByUserDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\OrderedItemsByUserDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\OrderedItemsByUserDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T07:57:18.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "FoodByKeywordss.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\FoodByKeywordss.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\FoodByKeywordss.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\FoodByKeywordss.cs",
-              "RelativeToolTip": "Domain\\DTO\\FoodByKeywordss.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T10:00:38.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "DeliveryAgentDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\DeliveryAgentDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\DeliveryAgentDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\DeliveryAgentDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\DeliveryAgentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:38:19.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "SqlConnection.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\ADO\\SqlConnection.cs",
-              "RelativeDocumentMoniker": "Domain\\ADO\\SqlConnection.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\ADO\\SqlConnection.cs",
-              "RelativeToolTip": "Domain\\ADO\\SqlConnection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:59:32.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Address.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Address.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Address.cs",
-              "RelativeToolTip": "Domain\\Models\\Address.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T12:05:31.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "CategoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\CategoryDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\CategoryDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\CategoryDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\CategoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:38:18.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "DeliveryAgent.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\DeliveryAgent.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\DeliveryAgent.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\DeliveryAgent.cs",
-              "RelativeToolTip": "Domain\\Models\\DeliveryAgent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:29:20.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Review.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Review.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Review.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\Review.cs",
-              "RelativeToolTip": "Domain\\Models\\Review.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:29:02.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\OrderItem.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\Models\\OrderItem.cs",
-              "RelativeToolTip": "Domain\\Models\\OrderItem.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:29:03.867Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "RestaurantCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantCreateDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\RestaurantCreateDto.cs",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantCreateDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\RestaurantCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:46:49.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "FoodDeliveryProject",
-              "DocumentMoniker": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\FoodDeliveryProject.csproj",
-              "RelativeDocumentMoniker": "FoodDeliveryProject\\FoodDeliveryProject.csproj",
-              "ToolTip": "C:\\Users\\2440011\\source\\repos\\OnlineFoodDeliverymanagement\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\FoodDeliveryProject.csproj",
-              "RelativeToolTip": "FoodDeliveryProject\\FoodDeliveryProject.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-11T09:43:23.842Z"
             }
           ]
         }
