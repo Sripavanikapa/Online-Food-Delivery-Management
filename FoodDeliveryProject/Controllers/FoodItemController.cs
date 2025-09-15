@@ -1,6 +1,7 @@
 ﻿using Domain.DTO;
 using Infrastructure.Interfaces;
 using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 namespace FoodDeliveryProject.Controllers
@@ -16,7 +17,7 @@ namespace FoodDeliveryProject.Controllers
         }
 
         //get food items by keywords
-
+        [Authorize(Roles = "Admin,customer")]
         [HttpGet("GetFoodItemsByKeywords")]
         public IActionResult GetByFoodItems(string keyword)
         {
@@ -28,6 +29,11 @@ namespace FoodDeliveryProject.Controllers
             return Ok(foodItems);
         }
 
+
+        //add food items
+
+
+        [Authorize(Roles = "restaurant")]
         [HttpPost("addfooditems")]
         public IActionResult AddFoodItems([FromQuery] FoodItemDto foodItemCreateDto)
         {
@@ -39,6 +45,10 @@ namespace FoodDeliveryProject.Controllers
             return Ok(createdFoodItem);
         }
 
+
+        //update food items
+
+        [Authorize(Roles = "restaurant")]
         [HttpPut("update/fooditem")]
         public IActionResult UpdateFoodItem([FromQuery] int foodid, [FromQuery] FoodItemDto fooddto)
         {
@@ -50,6 +60,11 @@ namespace FoodDeliveryProject.Controllers
             return Ok(updatedfood);
         }
 
+
+        //delete food items
+
+
+        [Authorize(Roles = "restaurant")]
         [HttpDelete("delete/fooditem/{itemid}")]
         public IActionResult DeleteFoodItem(int itemid)
         {

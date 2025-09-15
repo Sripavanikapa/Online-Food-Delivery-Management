@@ -46,6 +46,8 @@ namespace Infrastructure.Repositories
                          .Where(u => u.Phoneno == phno)
                          .Select(u => u.Id)
                          .FirstOrDefault();
+
+            
             var addres = _context.Addresses.Find(userId);
             if (addres != null)
             {

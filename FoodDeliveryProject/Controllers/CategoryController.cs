@@ -1,6 +1,7 @@
 ﻿using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +19,11 @@ namespace FoodDeliveryProject.Controllers
             _categoryService= new CategoryService();
         }
 
+
+        // get all categories
+
+
+        [Authorize(Roles = "admin,customer,restaurant")]
         [HttpGet("AllCategories")]
         public ActionResult<List<string>> GetAllCategories()
         {
@@ -28,6 +34,11 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(categories);
         }
+
+
+        // add category
+
+        [Authorize(Roles ="restaurant")]
         [HttpPost("AddCategory")]
         public ActionResult AddCategory([FromBody] CategoryDto catagoryDto) { 
             var category=_categoryService.AddCategory(catagoryDto);
@@ -38,7 +49,7 @@ namespace FoodDeliveryProject.Controllers
             return Ok(category);
         }
 
-        //updateCategory by admin
+       
 
     }
 }

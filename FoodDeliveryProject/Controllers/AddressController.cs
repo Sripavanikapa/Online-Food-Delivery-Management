@@ -1,10 +1,11 @@
-﻿using Infrastructure.Repositories;
+﻿using Domain.DTO;
+using Domain.Models;
+using Infrastructure.Interfaces;
+using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Domain.Models;
-using Domain.DTO;
-using Infrastructure.Interfaces;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -20,6 +21,7 @@ namespace FoodDeliveryProject.Controllers
 
 
         //create a address
+        [Authorize(Roles = "customer,restaurant,deliveryagent")]
         [HttpPost("create/address")]
         public IActionResult CreateAddress([FromQuery] AddressDto address)
         {
@@ -33,6 +35,7 @@ namespace FoodDeliveryProject.Controllers
 
 
         //update a address
+        [Authorize(Roles = "customer,restaurant,deliveryagent")]
         [HttpPut("update/address")] 
         public IActionResult UpdateAddress([FromQuery] int addressid,[FromQuery] AddressDto address)
         {
@@ -46,6 +49,7 @@ namespace FoodDeliveryProject.Controllers
 
 
         //get addresses by customer id
+        [Authorize(Roles = "customer,restaurant,deliveryagent")]
         [HttpGet("get/addresses")]
 
         public ActionResult GetAddressesByCustomerId([FromQuery]string phno)
@@ -58,8 +62,13 @@ namespace FoodDeliveryProject.Controllers
             return Ok(addresses);
         }
 
+
+
+
         //delete address by id
 
+
+        [Authorize(Roles = "customer,restaurant,deliveryagent")]
         [HttpDelete("delete/address")]
         public ActionResult DeleteAddressById([FromQuery]int id)
         {

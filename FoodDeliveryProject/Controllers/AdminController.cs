@@ -19,21 +19,20 @@ namespace FoodDeliveryProject.Controllers
             this.admin = admin;
             
         }
-        [Authorize]
+
+        // get total users count
+
+
+        [Authorize(Roles = "admin")]
         [HttpGet("/TotalUsers")]
         public ActionResult<int> getAllUsersCount()
         {
             return admin.getAllUsersCount();
         }
 
-        //[HttpGet]
-        //[Route("byrole{role}")]
-        //public ActionResult<List<UserDto>> getUsersByRole(string role)
-        //{
-        //    return admin.getUsersByRole(role);
+        // get total restaurants count
 
-        //}
-        [Authorize]
+        [Authorize(Roles = "admin")]
         [HttpGet("/getCustomers")]
         public ActionResult<List<AdminUser>> GetCustomers()
         {
@@ -44,6 +43,9 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(Customers);
         }
+
+
+
         [Authorize(Roles = "admin")]
         [HttpGet("/getRestaurants")]
         public  ActionResult<List<RestaurantDto>> GetRestaurants()
@@ -55,6 +57,9 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(restaurants);
         }
+
+
+
         [HttpPut]
         [Authorize(Roles = "admin")]
         [Route("ApproverOrBlockUser/{id}/{isValid}")]
@@ -67,17 +72,9 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(new { message = "user details updated successfully" });
         }
-        //[HttpDelete]
-        //[Route("/restaurant/{id}")]
-        //public IActionResult DeleteRestauarnt([FromRoute] int id)
-        //{
-        //    var deleteRestaurant=admin.DeleteRestauarnt(id);
-        //    if (!deleteRestaurant)
-        //    {
-        //        return NotFound(new { message = "No User found with that ID" });
-        //    }
-        //    return Ok(new { message = "Successfully Deleted that restaurant" });
-        //}
+        
+
+
         [Authorize(Roles = "admin")]
         [HttpDelete]
         [Route("user/{id}")]
@@ -90,6 +87,9 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(new { message = "User successfully Deleted" });
         }
+
+
+
         [Authorize(Roles = "admin")]
         [HttpGet]
         [Route("ordersSummary")]
@@ -102,16 +102,9 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(data);
         }
-        //[HttpPut("UpdateOrBlockDeliveryAgent")]
-        //public IActionResult UpdateDeliveryAgentStatus(int id,bool status)
-        //{
-        //    var agent=admin.UpdateDeliveryAgentStatus(id,status);
-        //    if (!agent)
-        //    {
-        //        return NotFound("No agent with that id");
-        //    }
-        //    return Ok("status updated successfully");
-        //}
+        
+
+
         [Authorize(Roles = "admin")]
         [HttpGet("getAllDeliveryAgents")]
         public IActionResult getDeliveryAgents()

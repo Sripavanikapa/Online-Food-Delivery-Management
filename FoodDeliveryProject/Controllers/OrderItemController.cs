@@ -1,5 +1,6 @@
 ﻿using Domain.DTO;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FoodDeliveryProject.Controllers
@@ -15,6 +16,10 @@ namespace FoodDeliveryProject.Controllers
             _fooditems = fooditems;
         }
 
+        // get food items by order id
+
+
+        [Authorize(Roles = "admin,customer,restaurant")]
         [HttpGet("getfooditemsbyid/{id}")]
         public IActionResult GetFoodByOrder(int id)
         {

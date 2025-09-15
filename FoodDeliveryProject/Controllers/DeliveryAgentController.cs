@@ -17,6 +17,9 @@ namespace FoodDeliveryProject.Controllers
             _deliveryAgentService = new DeliveryAgentService();
         }
 
+
+
+        // get all deliveries assigned to a delivery agent by agent id
         [HttpGet("AllDeliveriesByAgent")]
         public ActionResult<List<DeliveryDto>> GetDeliveriesByAgentId(int AgentId)
         {

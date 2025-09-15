@@ -110,3 +110,5 @@ C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\OnlineFoodDeliveryman
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\OnlineFoodDeliverymanagement\Infrastructure\bin\Debug\net8.0\Testing.runtimeconfig.json
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\OnlineFoodDeliverymanagement\Infrastructure\bin\Debug\net8.0\Testing.dll
 C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\OnlineFoodDeliverymanagement\Infrastructure\bin\Debug\net8.0\Testing.pdb
+C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\OnlineFoodDeliverymanagement\Infrastructure\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\2440011\source\repos\OnlineFoodDeliverymanagement\OnlineFoodDeliverymanagement\Infrastructure\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml

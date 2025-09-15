@@ -1,6 +1,7 @@
 ﻿using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -17,7 +18,9 @@ namespace FoodDeliveryProject.Controllers
             _order = order;
         }
 
+        // Add a new order
 
+        [Authorize(Roles = "customer")]
         [HttpPost("AddingordersbyId")]
         public IActionResult AddingOrder([FromBody] AddOrderDto dto)
         {
@@ -31,8 +34,9 @@ namespace FoodDeliveryProject.Controllers
         }
 
 
+        // Get orders by order id
 
-
+        [Authorize(Roles="admin,restaurant")]
         [HttpGet("GetOrderbyorderId/{id}")]
         public IActionResult GetOrderByOrderId(int id)
         {

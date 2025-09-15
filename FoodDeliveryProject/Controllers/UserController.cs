@@ -18,19 +18,30 @@ namespace FoodDeliveryProject.Controllers
         {
             this.userServices = userServices;
         }
+
+
+        //create user
+
+
         [AllowAnonymous]
         [HttpPost]
         public IActionResult CreateUser([FromQuery] UserDto userDto)
         {
-           
+
             var createdUser = userServices.CreateUser(userDto);
-            if (createdUser==null)
+            if (createdUser == null)
             {
                 return NotFound("You dont have access to create admin");
             }
             return Ok(createdUser);
         }
 
+
+
+        //update user
+
+
+        [Authorize(Roles = "admin,customer,restaurant,deliveryagent")]
         [HttpPut("update/user")]
         public IActionResult UpdateUser([FromQuery] UpdateUserDto userDto)
         {
@@ -42,6 +53,11 @@ namespace FoodDeliveryProject.Controllers
             return Ok(updatedUser);
         }
 
+
+        //get all addresses by user phone number
+
+
+        [Authorize(Roles = "admin,customer,restaurant,deliveryagent")] 
         [HttpGet("get/alladdress/users")]
         public IActionResult GetAllUsers([FromQuery]string phno)
         {
@@ -50,6 +66,9 @@ namespace FoodDeliveryProject.Controllers
         }
 
 
+        //get all orders by user phone number
+
+        [Authorize(Roles = "admin,customer")]
         [HttpGet("getorders")]
         public IActionResult GetOrdersByUser([FromQuery]string phno)
         {
@@ -57,6 +76,10 @@ namespace FoodDeliveryProject.Controllers
             return Ok(orders);
         }
 
+
+        //delete user by phone number
+
+        [Authorize(Roles = "admin,customer,restaurant,deliveryagent")]
         [HttpDelete("delete/user")]
         public IActionResult DeleteUser([FromQuery] string Phno)
         {

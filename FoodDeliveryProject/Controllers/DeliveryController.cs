@@ -1,8 +1,9 @@
-﻿using Domain.Models; 
-using Domain.ADO;    
-using Microsoft.AspNetCore.Mvc;
-using Infrastructure.Repositories;
+﻿using Domain.ADO;    
 using Domain.DTO;
+using Domain.Models; 
+using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -18,6 +19,8 @@ namespace FoodDeliveryProject.Controllers
         }
 
         //for delivery agent
+
+        [Authorize(Roles = "deliveryagent")]
         [HttpGet("DeliveryDetailsByOrderId/{orderId}")]
         public ActionResult<DeliveryDto> GetDeliveryDetailsByOrderId(int orderId, string CustAddress)
         {

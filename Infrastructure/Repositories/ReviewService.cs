@@ -34,7 +34,7 @@ namespace Infrastructure.Repositories
         //}
 
 
-
+        
         public ReviewGetRatingdto GetAverageRatingByRestaurantName(string restaurantName)
         {
             var reviews = _context.Reviews

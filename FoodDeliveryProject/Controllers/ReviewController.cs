@@ -1,5 +1,6 @@
 ﻿using Domain.DTO;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,9 @@ namespace FoodDeliveryProject.Controllers
             _rating = rating;
         }
 
-        
+        // get reviews of a restaurant by restaurant name
+
+        [Authorize(Roles = "admin,customer,restaurant,deliveryagent")]
         [HttpGet("GetReviewsByRestaurant/{restaurantName}")]
         public IActionResult GetReviewsByRestaurant(string restaurantName)
         {
@@ -25,8 +28,10 @@ namespace FoodDeliveryProject.Controllers
             return Ok(result);
         }
 
+        // get restaurant names by rating
 
 
+        [Authorize(Roles = "admin,customer,restaurant,deliveryagent")]
         [HttpGet("Getrestaurantbyrating/{id}")]
         public IActionResult GetrestaurantbyRating(decimal id)
         {
