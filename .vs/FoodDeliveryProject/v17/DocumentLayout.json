@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\dto\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\infrastructure\\repositories\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\infrastructure\\repositories\\adminimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\adminimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\dto\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\dto\\deliverydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\deliverydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\migrations\\20250915120624_addisactivetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\migrations\\20250915120624_addisactivetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\fooddeliveryproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -43,20 +75,12 @@
       "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\infrastructure\\repositories\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\fooddeliveryproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\fooddeliveryproject\\controllers\\deliveryagentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|solutionrelative:fooddeliveryproject\\controllers\\deliveryagentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\infrastructure\\repositories\\adminimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\adminimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7FA04EB-07A8-4B84-BBCD-18E52C160931}|FoodDeliveryProject\\FoodDeliveryProject.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\fooddeliveryproject\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,10 +142,6 @@
       "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\iaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\models\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\models\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -132,10 +152,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\ideliveryagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\interfaces\\ideliveryagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\domain\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9AAAB0-24BD-4E03-B68A-39B73EDCDE98}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2908793-2628-492E-8BB9-3D76593E2C60}|Infrastructure\\Infrastructure.csproj|c:\\users\\2440012\\onedrive - cognizant\\desktop\\finalfood\\onlinefooddeliverymanagement\\infrastructure\\interfaces\\ifooditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -217,7 +233,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -225,44 +241,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RestaurantImplementation.cs",
-              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\RestaurantImplementation.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAqwIsAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\Delete.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\Delete.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\Delete.cs",
+              "RelativeToolTip": "Domain\\DTO\\Delete.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:05:26.282Z",
+              "WhenOpened": "2025-09-15T12:36:22.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IRestaurant.cs",
-              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IRestaurant.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IRestaurant.cs",
-              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IRestaurant.cs",
-              "RelativeToolTip": "Infrastructure\\Interfaces\\IRestaurant.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwBkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\CreateUserDto.cs",
+              "RelativeToolTip": "Domain\\DTO\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:01:25.009Z"
+              "WhenOpened": "2025-09-15T11:56:58.849Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RestaurantDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\RestaurantDto.cs",
-              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\RestaurantDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "DeliveryDto.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\DeliveryDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\DeliveryDto.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\DeliveryDto.cs",
+              "RelativeToolTip": "Domain\\DTO\\DeliveryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T06:46:52.137Z"
+              "WhenOpened": "2025-09-15T11:43:50.009Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UserDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\UserDto.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UserDto.cs",
+              "RelativeToolTip": "Domain\\DTO\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T05:34:54.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminImplementation.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\AdminImplementation.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\AdminImplementation.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\AdminImplementation.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\AdminImplementation.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAArwJEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T11:00:51.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\UserServices.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserServices.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\UserServices.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UserServices.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAewBcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T04:17:10.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250915120624_AddIsActiveToUser.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Migrations\\20250915120624_AddIsActiveToUser.cs",
+              "RelativeDocumentMoniker": "Domain\\Migrations\\20250915120624_AddIsActiveToUser.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Migrations\\20250915120624_AddIsActiveToUser.cs",
+              "RelativeToolTip": "Domain\\Migrations\\20250915120624_AddIsActiveToUser.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T12:06:25.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "RestaurantCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantCreateDto.cs",
               "RelativeDocumentMoniker": "Domain\\DTO\\RestaurantCreateDto.cs",
@@ -274,7 +339,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
+              "Title": "RestaurantDto.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\RestaurantDto.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\RestaurantDto.cs",
+              "RelativeToolTip": "Domain\\DTO\\RestaurantDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T06:46:52.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\User.cs",
+              "RelativeToolTip": "Domain\\Models\\User.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA7wCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:20:08.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRestaurant.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IRestaurant.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IRestaurant.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IRestaurant.cs",
+              "RelativeToolTip": "Infrastructure\\Interfaces\\IRestaurant.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T11:01:25.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RestaurantImplementation.cs",
+              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\RestaurantImplementation.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\RestaurantImplementation.cs",
+              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\RestaurantImplementation.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\RestaurantImplementation.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAqwIsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T11:05:26.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\appsettings.json",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\appsettings.json",
@@ -282,12 +395,11 @@
               "RelativeToolTip": "FoodDeliveryProject\\appsettings.json",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-12T12:17:52.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:17:52.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "RestaurantController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\RestaurantController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\RestaurantController.cs",
@@ -299,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "DeliveryAgentService.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\DeliveryAgentService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\DeliveryAgentService.cs",
@@ -311,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "DeliveryServices.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\DeliveryServices.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\DeliveryServices.cs",
@@ -323,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\CategoryService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\CategoryService.cs",
@@ -335,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\UserController.cs",
@@ -347,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "DeliveryAgentController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\DeliveryAgentController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\DeliveryAgentController.cs",
@@ -359,19 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserServices.cs",
-              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\UserServices.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserServices.cs",
-              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\UserServices.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\UserServices.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAgwE0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T04:17:10.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\OrderController.cs",
@@ -383,19 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AdminImplementation.cs",
-              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\AdminImplementation.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\AdminImplementation.cs",
-              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\AdminImplementation.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\AdminImplementation.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAswEMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T11:00:51.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\AdminController.cs",
@@ -407,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "SmsService.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\SmsService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\SmsService.cs",
@@ -419,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "ISmsService.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\ISmsService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\ISmsService.cs",
@@ -431,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "FoodItemController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\FoodItemController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\FoodItemController.cs",
@@ -443,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "IAdmin.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IAdmin.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IAdmin.cs",
@@ -455,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "AddressServices.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\AddressServices.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\AddressServices.cs",
@@ -467,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Program.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Program.cs",
@@ -479,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IUserRepository.cs",
@@ -491,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "ReviewController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\ReviewController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\ReviewController.cs",
@@ -503,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "OrderItemController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\OrderItemController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\OrderItemController.cs",
@@ -515,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "DeliveryAgentDto.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\DeliveryAgentDto.cs",
               "RelativeDocumentMoniker": "Domain\\DTO\\DeliveryAgentDto.cs",
@@ -527,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\AuthController.cs",
@@ -539,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
@@ -551,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\source\\repos\\InterimPracticeMainApp\\InterimPracticeMainApp\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\InterimPracticeMainApp\\InterimPracticeMainApp\\Program.cs",
@@ -563,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "IAddress.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IAddress.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IAddress.cs",
@@ -575,19 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\User.cs",
-              "RelativeToolTip": "Domain\\Models\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:20:08.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "Restaurant.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\Restaurant.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Restaurant.cs",
@@ -599,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "DeliveryController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\DeliveryController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\DeliveryController.cs",
@@ -611,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "IDeliveryAgent.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IDeliveryAgent.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IDeliveryAgent.cs",
@@ -623,19 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UserDto.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\UserDto.cs",
-              "ToolTip": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\UserDto.cs",
-              "RelativeToolTip": "Domain\\DTO\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T05:34:54.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "IFoodItems.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IFoodItems.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IFoodItems.cs",
@@ -647,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "IDelivery.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Interfaces\\IDelivery.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interfaces\\IDelivery.cs",
@@ -659,7 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "FoodItem.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\FoodItem.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\FoodItem.cs",
@@ -671,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\Category.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Category.cs",
@@ -683,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "Delivery.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\Delivery.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Delivery.cs",
@@ -695,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Domain\\Data\\AppDbContext.cs",
@@ -707,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "OrderedItemsByUserDto.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\OrderedItemsByUserDto.cs",
               "RelativeDocumentMoniker": "Domain\\DTO\\OrderedItemsByUserDto.cs",
@@ -719,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "FoodByKeywordss.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\FoodByKeywordss.cs",
               "RelativeDocumentMoniker": "Domain\\DTO\\FoodByKeywordss.cs",
@@ -731,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "SqlConnection.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\ADO\\SqlConnection.cs",
               "RelativeDocumentMoniker": "Domain\\ADO\\SqlConnection.cs",
@@ -743,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\Address.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Address.cs",
@@ -755,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "CategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\CategoryDto.cs",
               "RelativeDocumentMoniker": "Domain\\DTO\\CategoryDto.cs",
@@ -767,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "AddressDto.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\DTO\\AddressDto.cs",
               "RelativeDocumentMoniker": "Domain\\DTO\\AddressDto.cs",
@@ -779,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "AddressController.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\Controllers\\AddressController.cs",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\Controllers\\AddressController.cs",
@@ -791,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "FoodItemServices.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Infrastructure\\Repositories\\FoodItemServices.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\FoodItemServices.cs",
@@ -803,7 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "DeliveryAgent.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\DeliveryAgent.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\DeliveryAgent.cs",
@@ -815,7 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\Review.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Review.cs",
@@ -827,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\Domain\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\OrderItem.cs",
@@ -839,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "FoodDeliveryProject",
               "DocumentMoniker": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\FinalFood\\OnlineFoodDeliverymanagement\\FoodDeliveryProject\\FoodDeliveryProject.csproj",
               "RelativeDocumentMoniker": "FoodDeliveryProject\\FoodDeliveryProject.csproj",
