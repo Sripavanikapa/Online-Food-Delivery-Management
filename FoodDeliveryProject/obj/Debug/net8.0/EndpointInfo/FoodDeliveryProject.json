@@ -439,13 +439,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "CustAddress",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -479,11 +472,10 @@
         ],
         "parameters": [
           {
-            "name": "AgentId",
+            "name": "phone",
             "in": "query",
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -495,7 +487,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DeliveryDto"
+                    "$ref": "#/components/schemas/AllDeliveryDto"
                   }
                 }
               },
@@ -503,7 +495,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DeliveryDto"
+                    "$ref": "#/components/schemas/AllDeliveryDto"
                   }
                 }
               },
@@ -511,7 +503,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DeliveryDto"
+                    "$ref": "#/components/schemas/AllDeliveryDto"
                   }
                 }
               }
@@ -1222,6 +1214,23 @@
           "role": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AllDeliveryDto": {
+        "type": "object",
+        "properties": {
+          "deliveryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

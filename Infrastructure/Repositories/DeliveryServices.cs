@@ -10,7 +10,7 @@ namespace Infrastructure.Repositories
 {
     public class DeliveryServices: IDelivery
     {
-        public DeliveryDto GetDeliveryDetailsByOrderId(int id, string CustAddress)
+        public DeliveryDto GetDeliveryDetailsByOrderId(int id)
         {
             DeliveryDto delivery = null;
 
@@ -20,7 +20,7 @@ namespace Infrastructure.Repositories
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@OrderId", id);
-                cmd.Parameters.AddWithValue("@CustAddress", CustAddress);
+                //cmd.Parameters.AddWithValue("@CustAddress", CustAddress);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 

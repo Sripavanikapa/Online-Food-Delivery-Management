@@ -14,20 +14,23 @@ namespace Infrastructure.Repositories
     public class DeliveryAgentService: IDeliveryAgent
     {
         //for delivery agent
-        public List<DeliveryDto> GetDeliveriesByAgentId(int AgentId)
+        public List<AllDeliveryDto> GetDeliveriesByAgentPhone(string phoneno)
         {
-            var deliveries = new List<DeliveryDto>();
+            var deliveries = new List<AllDeliveryDto>();
 
             using (SqlConnection conn = SqlConn.GetConnection())
             {
-                string query = "SELECT * FROM Delivery WHERE agent_id = @AgentId";
+                string query = "SELECT d.delivery_id, d.order_id, d.status " +
+                    "FROM Delivery d " +
+                    "join users u on u.id = d.agent_id " +
+                    "WHERE u.phoneno = @phoneno";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@AgentId", AgentId);
+                cmd.Parameters.AddWithValue("@phoneno", phoneno);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    deliveries.Add(new DeliveryDto
+                    deliveries.Add(new AllDeliveryDto
                     {
                         DeliveryId = Convert.ToInt32(reader["delivery_id"]),
                         OrderId = Convert.ToInt32(reader["order_id"]),

@@ -1,8 +1,9 @@
-﻿using Infrastructure.Repositories;
+﻿using Domain.DTO;
+using Domain.Models;
+using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Domain.Models;
-using Domain.DTO;
 
 
 namespace FoodDeliveryProject.Controllers
@@ -19,11 +20,13 @@ namespace FoodDeliveryProject.Controllers
 
 
 
-        // get all deliveries assigned to a delivery agent by agent id
+        // get all deliveries assigned to and done by a delivery agent by agent phone no
+
+        [Authorize(Roles = "DeliveryAgent")]
         [HttpGet("AllDeliveriesByAgent")]
-        public ActionResult<List<DeliveryDto>> GetDeliveriesByAgentId(int AgentId)
+        public ActionResult<List<AllDeliveryDto>> GetDeliveriesByAgentPhone(string phone)
         {
-            var deliveries = _deliveryAgentService.GetDeliveriesByAgentId(AgentId);
+            var deliveries = _deliveryAgentService.GetDeliveriesByAgentPhone(phone);
             if (deliveries == null)
             {
                 return NotFound("No deliveries found.");
@@ -31,6 +34,7 @@ namespace FoodDeliveryProject.Controllers
             return deliveries;
         }
 
+        [Authorize(Roles = "DeliveryAgent")]
         [HttpGet("updateDeliveryStatus")]
         public ActionResult<string> UpdateDeliveryStatus(int DeliveryId)
         {
@@ -42,7 +46,7 @@ namespace FoodDeliveryProject.Controllers
             return "Delivered";
         }
 
-
+        //for assigning agents
         [HttpGet("AvailableAgents")]
         public ActionResult<List<DeliveryAgentDto>> GetAvailableAgents()
         {

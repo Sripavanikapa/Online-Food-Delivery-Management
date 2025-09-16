@@ -10,7 +10,7 @@ namespace Infrastructure.Interfaces
 {
     public interface IDelivery
     {
-        DeliveryDto GetDeliveryDetailsByOrderId(int id, string CustAddress);    
+        DeliveryDto GetDeliveryDetailsByOrderId(int id);    
 
 
     }

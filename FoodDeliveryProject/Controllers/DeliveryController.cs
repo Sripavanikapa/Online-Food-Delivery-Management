@@ -20,11 +20,11 @@ namespace FoodDeliveryProject.Controllers
 
         //for delivery agent
 
-        [Authorize(Roles = "deliveryagent")]
+        [Authorize(Roles = "DeliveryAgent")]
         [HttpGet("DeliveryDetailsByOrderId/{orderId}")]
-        public ActionResult<DeliveryDto> GetDeliveryDetailsByOrderId(int orderId, string CustAddress)
+        public ActionResult<DeliveryDto> GetDeliveryDetailsByOrderId(int orderId)
         {
-            var delivery = _deliveryService.GetDeliveryDetailsByOrderId(orderId, CustAddress);
+            var delivery = _deliveryService.GetDeliveryDetailsByOrderId(orderId);
             if (delivery == null)
             {
                 return NotFound($"No delivery found for Order ID: {orderId}");
