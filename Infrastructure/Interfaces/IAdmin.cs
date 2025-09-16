@@ -20,7 +20,7 @@ namespace Infrastructure.Repositories
       //  bool DeleteRestauarnt(int id);
 
         bool DeleteUser(int id);
-
+        Task ApproveUserAsync(int id,bool isValid);
         List<RestaurantOrderSummaryDto> restaurantOrderSummaryDto();
        // bool UpdateDeliveryAgentStatus(int id , bool status);
 

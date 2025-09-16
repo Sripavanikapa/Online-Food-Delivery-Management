@@ -1,7 +1,7 @@
 ﻿using Domain.Data;
 using Domain.DTO;
 using Domain.Models;
-
+using Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +13,12 @@ namespace Infrastructure.Repositories
     public class AdminImplementation : IAdmin
     {
         private readonly AppDbContext appDbContext;
-
-        public AdminImplementation(AppDbContext appDbContext)
+        private readonly ISmsService smsService;
+        public AdminImplementation(AppDbContext appDbContext, ISmsService smsService)
         {
             this.appDbContext = appDbContext;
+            this.smsService = smsService;
+            
         }
 
         public List<RestaurantDto> getAllRestaurants()
@@ -58,6 +60,28 @@ namespace Infrastructure.Repositories
             user.IsValid = isValid;
             appDbContext.SaveChanges();
             return true;
+        }
+        public async Task ApproveUserAsync(int id,bool isValid)
+        {
+            var user = await appDbContext.Users.FindAsync(id);
+            if (user == null)
+            {
+                throw new KeyNotFoundException("User not found");
+            }
+            user.IsValid = isValid;
+            appDbContext.Users.Update(user);
+            await appDbContext.SaveChangesAsync();
+
+
+            string msg = isValid ? "Your Account has been approved by User." :
+                "Your Account has been blocked by Admin.";
+            if (!string.IsNullOrWhiteSpace(user.Phoneno))
+            {
+                await smsService.SendSmsAsync(
+                    user.Phoneno,
+                    msg
+                    );
+            }
         }
         //public bool DeleteRestauarnt(int id)
         //{
@@ -119,6 +143,7 @@ namespace Infrastructure.Repositories
             var Customers = appDbContext.Users.Where(u => u.Role == "Customer")
                 .Select(x => new AdminUser
                 {
+                    
                     
                     Name = x.Name,
                     Phoneno = x.Phoneno,

@@ -21,6 +21,8 @@ public partial class User
     public required string Password { get; set; }
     
     public required bool IsValid { get; set; }
+
+    public required bool IsActive { get; set; }
     
     public required string Role { get; set; }
 

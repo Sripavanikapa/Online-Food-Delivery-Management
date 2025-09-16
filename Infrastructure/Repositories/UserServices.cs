@@ -22,11 +22,13 @@ namespace Infrastructure.Repositories
             }
             var user = new User
             {
+              
                 Name = userdto.Name,
                 Phoneno = userdto.Phoneno,
                 Password = userdto.Password,
                 IsValid = false,
-                Role = userdto.Role
+                Role = userdto.Role,
+                IsActive=false
             };
             _context.Users.Add(user);
             _context.SaveChanges();

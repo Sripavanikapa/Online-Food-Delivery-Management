@@ -19,5 +19,7 @@ namespace FoodDeliveryProject.Repositories
         //List<RestaurantDto> GetRestaurantByRole(string role);
 
         public List<RestaurantWithFoodDto> RestaurantWithThereFoodItems();
+
+        List<RestaurantDto> GetOpenRestaurants();
     }
 }
