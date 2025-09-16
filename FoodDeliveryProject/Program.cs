@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using Domain.Models;
 
 namespace FoodDeliveryProject
 {
@@ -20,6 +21,7 @@ namespace FoodDeliveryProject
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            var orsApiKey = builder.Configuration["OpenRouteService:ApiKey"];
             // Add services to the container.
             builder.Services.AddDbContext<AppDbContext>(options =>
       options.UseSqlServer(
@@ -29,7 +31,10 @@ namespace FoodDeliveryProject
 
 
 
-
+            builder.Services.AddSingleton(new OpenRouteServiceConfig
+            {
+                ApiKey = orsApiKey
+            });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -47,6 +52,16 @@ namespace FoodDeliveryProject
             builder.Services.AddScoped<IOrder, OrderService>();
             builder.Services.AddScoped<IOrderItem, OrderItemService>();
             builder.Services.AddScoped<TokenGeneration>();
+            builder.Services.AddHttpClient<OpenRouteServiceClient>();
+
+            builder.Services.AddHttpClient<OpenRouteServiceClient>();
+            builder.Services.Configure<OpenRouteServiceConfig>(builder.Configuration.GetSection("OpenRouteService"));
+            builder.Services.AddSingleton(sp =>
+                new OpenRouteServiceClient(
+                    sp.GetRequiredService<HttpClient>(),
+                    sp.GetRequiredService<IOptions<OpenRouteServiceConfig>>().Value
+                ));
+
 
             var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
             builder.Services.AddAuthentication(options =>
