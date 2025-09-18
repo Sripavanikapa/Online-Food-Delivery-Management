@@ -15,5 +15,7 @@ namespace Infrastructure.Interfaces
         public IEnumerable<FoodByKeywords> GetFoodItemsByKeywords(string keywords);
 
         FoodItemDto UpdateFoodItem(int foodid,FoodItemDto fooditem);
+
+        List<FoodItemDto> GetFoodItemsByRestaurant(string name);
     }
 }

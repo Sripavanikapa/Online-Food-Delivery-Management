@@ -131,6 +131,7 @@ namespace FoodDeliveryProject.Repositories
                     : "No food item"
             }).ToList();
         }
+        //used sql in linq
         public List<RestaurantDto> GetOpenRestaurants()
         {
             var restaurants = appDbContext.Restaurants

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodDeliveryProject.DTOs
 {
-    public class FoodItemDto
+    public class FoodItemDtoWithPrice
     {
         public string ItemName { get; set; } = null!;
         public decimal Price { get; set; }
@@ -19,7 +19,7 @@ namespace FoodDeliveryProject.DTOs
         public string RestaurantName { get; set; } = null!;
         public string CustomerName { get; set; } = null!;
         public decimal TotalPrice { get; set; }
-        public List<FoodItemDto> FoodItems { get; set; } = new();
+        public List<FoodItemDtoWithPrice> FoodItems { get; set; } = new();
     }
 }
 

@@ -105,6 +105,25 @@ namespace Infrastructure.Repositories
             }
             return null;
         }
+        public List<FoodItemDto> GetFoodItemsByRestaurant(string name)
+        {
+            var foodItems = _context.FoodItems
+                .Where(f => f.Restaurant.User.Name == name)
+                .Select(f => new FoodItemDto
+                {
+                    restaurant_id = f.RestaurantId,
+                    item_name = f.ItemName,
+                    price = f.Price, 
+                    category_id = f.CategoryId,
+                    status = f.Status,
+                    Description = f.Description,
+                    keywords = f.Keywords
+                })
+                .ToList();
+
+            return foodItems;
+        }
+
 
     }
 }

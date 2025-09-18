@@ -6,6 +6,7 @@ using Infrastructure.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using FoodItemDto = Domain.DTO.FoodItemDto;
 
 namespace Infrastructure.Repositories
 {
@@ -85,7 +86,7 @@ namespace Infrastructure.Repositories
         var foodItems = _context.OrderItems
             .Where(oi => oi.OrderId == orderId)
             .Include(oi => oi.Item)
-            .Select(oi => new FoodDeliveryProject.DTOs.FoodItemDto
+            .Select(oi => new FoodDeliveryProject.DTOs.FoodItemDtoWithPrice
             {
                 ItemName = oi.Item!.ItemName,
                 Price = oi.Item.Price,
@@ -104,7 +105,53 @@ namespace Infrastructure.Repositories
             FoodItems = foodItems
         };
     }
+        public List<GetOrderDto> GetOrdersByUserId(string phno)
+        {
+            var userId = _context.Users
+                .Where(u => u.Phoneno == phno)
+                .Select(u => u.Id)
+                .FirstOrDefault();
+
+            if (userId == 0)
+                return new List<GetOrderDto>();
+
+            var orders = _context.Orders
+                .Where(o => o.UserId == userId)
+                .Include(o => o.Restaurant)
+                    .ThenInclude(r => r.User)
+                .ToList();
+
+            var result = new List<GetOrderDto>();
+
+            foreach (var order in orders)
+            {
+                var foodItems = _context.OrderItems
+                    .Where(oi => oi.OrderId == order.OrderId)
+                    .Include(oi => oi.Item)
+                    .Select(oi => new FoodItemDtoWithPrice
+                    {
+                        ItemName=oi.Item.ItemName,
+                        Price = oi.Item.Price,
+                        Quantity=oi.Quantity,
+                        TotalItemPrice = oi.Item.Price * oi.Quantity
+                    })
+                    .ToList();
+
+                var totalPrice = foodItems.Sum(fi => fi.TotalItemPrice);
+
+                result.Add(new GetOrderDto
+                {
+                    RestaurantName = order.Restaurant?.User?.Name ?? "Unknown",
+                    CustomerName = order.User?.Name ?? "Unknown",
+                    TotalPrice = totalPrice,
+                    FoodItems = foodItems
+                });
+            }
+
+            return result;
+        }
 
 
-}
+
+    }
 }

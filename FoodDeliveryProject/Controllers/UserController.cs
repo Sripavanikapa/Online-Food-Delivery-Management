@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Domain.DTO;
 using Domain.Models;
-using Domain.DTO;
+using FoodDeliveryProject.DTOs;
 using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -61,7 +62,7 @@ namespace FoodDeliveryProject.Controllers
         [HttpGet("get/alladdress/users")]
         public IActionResult GetAllUsers([FromQuery]string phno)
         {
-            IEnumerable<Address> address = userServices.GetAddressesByUserId(phno);
+            List<AddressDto> address = userServices.GetAddressesByUserId(phno);
             return Ok(address);
         }
 
@@ -72,7 +73,7 @@ namespace FoodDeliveryProject.Controllers
         [HttpGet("getorders")]
         public IActionResult GetOrdersByUser([FromQuery]string phno)
         {
-            IEnumerable<OrderedItemsByUserDto> orders = userServices.GetOrdersByUserId(phno);
+            List<GetOrderDto> orders = userServices.GetOrdersByUserId(phno);
             return Ok(orders);
         }
 

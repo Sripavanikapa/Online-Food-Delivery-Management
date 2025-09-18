@@ -1,6 +1,8 @@
 ﻿using Domain.DTO;
 using Domain.Models;
 using FoodDeliveryProject.Repositories;
+using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +14,12 @@ namespace FoodDeliveryProject.Controllers
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurant restaurant;
-        public RestaurantController(IRestaurant restaurant)
+        private readonly IFoodItems foodItems;
+
+        public RestaurantController(IRestaurant restaurant,IFoodItems foodItems)
         {
             this.restaurant=restaurant;
+            this.foodItems = foodItems;
         }
 
 
@@ -40,7 +45,7 @@ namespace FoodDeliveryProject.Controllers
             return Ok(restaurantWithThatId);
 
         }
-
+        [Authorize(Roles = "restaurant")]
         [HttpPost]
         public IActionResult AddRestaurant([FromBody] RestaurantCreateDto restaurantCreateDto)
         {
@@ -53,7 +58,7 @@ namespace FoodDeliveryProject.Controllers
 
 
         }
-
+        [Authorize(Roles = "restaurant")]
         [HttpPut]
         [Route("{id}/{status}")]
         public IActionResult UpdateRestaurantStatus([FromRoute] int id, [FromRoute] bool status)
@@ -66,6 +71,7 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(new {message="Restaurant status updated successfully"});
         }
+        [Authorize(Roles = "restaurant,admin")]
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeleteRestaurant(int id)
@@ -77,6 +83,42 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(new { message = "Restaurant deleted successfully" });
         }
+        [Authorize(Roles = "restaurant")]
+        [HttpPost("addfooditems")]
+        public IActionResult AddFoodItems([FromQuery] FoodItemDto foodItemCreateDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var createdFoodItem = foodItems.CreateFoodItem(foodItemCreateDto);
+            return Ok(createdFoodItem);
+        }
+        //update food items
+        //this for there may be price change etc..
+        [Authorize(Roles = "restaurant")]
+        [HttpPut("update/fooditem")]
+        public IActionResult UpdateFoodItem([FromQuery] int foodid, [FromQuery] FoodItemDto fooddto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return NotFound("FoodItem Updation Cannot be done");
+            }
+            var updatedfood = foodItems.UpdateFoodItem(foodid, fooddto);
+            return Ok(updatedfood);
+        }
+        [Authorize(Roles = "restaurant")]
+        [HttpDelete("delete/fooditem/{itemid}")]
+        public IActionResult DeleteFoodItem(int itemid)
+        {
+            var item =foodItems.DeleteFoodItemByFoodId(itemid);
+            if (item)
+            {
+                return Ok("Food Item Successfully deleted");
+            }
+            return NotFound("Cannot find the item in Database");
+        }
+        [Authorize(Roles = "restaurant,admin,customer")]
         [HttpGet]
         [Route("RestaurantWithFoodItems")]
         public IActionResult RestaurantWithThereFoodItems()
@@ -99,7 +141,7 @@ namespace FoodDeliveryProject.Controllers
         //    }
         //    return Ok(restaurantWithThatRole);
         //}
-
+        [Authorize(Roles = "admin")]
         [HttpGet("open-restaurants")]
         public ActionResult<List<RestaurantDto>> GetOpenRestaurants()
         {

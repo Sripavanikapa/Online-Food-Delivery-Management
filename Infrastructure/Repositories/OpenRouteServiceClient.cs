@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Microsoft.Extensions.Options;
 using System;
 using System.Net.Http;
 using System.Text.Json;
@@ -11,31 +12,62 @@ namespace Infrastructure.Repositories
         private readonly HttpClient _httpClient;
         private readonly OpenRouteServiceConfig _config;
 
-        public OpenRouteServiceClient(HttpClient httpClient, OpenRouteServiceConfig config)
-        {
-            _httpClient = httpClient;
-            _config = config;
-        }
+        
 
-        // Method to get ETA between two points (lat/lon)
-        public async Task<(double Distance, double Duration)> GetRouteAsync(double startLat, double startLng, double endLat, double endLng)
+        public OpenRouteServiceClient(IOptions<OpenRouteServiceConfig> config, HttpClient httpClient)
         {
-            var url = $"https://api.openrouteservice.org/v2/directions/driving-car?api_key={_config.ApiKey}&start={startLng},{startLat}&end={endLng},{endLat}";
+            _config = config.Value;
+            _httpClient = httpClient;
+            
+        }
+        // Method to get ETA between two points (lat/lon)
+
+
+
+     
+
+public async Task<(double Distance, double Duration)> GetRouteAsync(
+    double startLat, double startLng, double endLat, double endLng)
+        {
+            var url = $"https://api.openrouteservice.org/v2/directions/driving-car" +
+                      $"?api_key={_config.ApiKey}&start={startLng},{startLat}&end={endLng},{endLat}";
 
             var response = await _httpClient.GetAsync(url);
-            response.EnsureSuccessStatusCode();
+            var content = await response.Content.ReadAsStringAsync();
 
-            var json = await response.Content.ReadAsStringAsync();
+            if (!response.IsSuccessStatusCode)
+                throw new Exception($"Route API failed: {response.StatusCode} - {content}");
 
-            using var doc = JsonDocument.Parse(json);
-            var features = doc.RootElement.GetProperty("features")[0];
-            var summary = features.GetProperty("properties").GetProperty("summary");
+            using var doc = JsonDocument.Parse(content);
 
-            double distance = summary.GetProperty("distance").GetDouble(); // in meters
-            double duration = summary.GetProperty("duration").GetDouble(); // in seconds
+            // ✅ Case 1: Standard response with routes
+            if (doc.RootElement.TryGetProperty("routes", out var routes) && routes.GetArrayLength() > 0)
+            {
+                var summary = routes[0].GetProperty("summary");
+                double distance = summary.GetProperty("distance").GetDouble();
+                double duration = summary.GetProperty("duration").GetDouble();
+                return (distance, duration);
+            }
 
-            return (distance, duration);
+            // ✅ Case 2: Edge case response with features
+            if (doc.RootElement.TryGetProperty("features", out var features) && features.GetArrayLength() > 0)
+            {
+                var props = features[0].GetProperty("properties");
+                if (props.TryGetProperty("segments", out var segments) && segments.GetArrayLength() > 0)
+                {
+                    var segment = segments[0];
+                    double distance = segment.TryGetProperty("distance", out var d) ? d.GetDouble() : 0.0;
+                    double duration = segment.TryGetProperty("duration", out var t) ? t.GetDouble() : 0.0;
+                    return (distance, duration);
+                }
+            }
+
+            throw new Exception($"Route data missing or malformed. Response: {content}");
         }
+
+
+
+
 
         public async Task<(double Lat, double Lng)> GeocodeAddressAsync(string address)
         {

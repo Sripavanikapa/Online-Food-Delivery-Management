@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using Domain.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FoodDeliveryProject
 {
@@ -51,16 +52,22 @@ namespace FoodDeliveryProject
             builder.Services.AddScoped<IReview, ReviewService>();
             builder.Services.AddScoped<IOrder, OrderService>();
             builder.Services.AddScoped<IOrderItem, OrderItemService>();
+            builder.Services.AddScoped<ISmsService,SmsService>();
             builder.Services.AddScoped<TokenGeneration>();
+            builder.Services.AddScoped<CategoryService>();
             builder.Services.AddHttpClient<OpenRouteServiceClient>();
-
+            builder.Services.Configure<TwilioSettings>(builder.Configuration.GetSection("Twilio"));
+            builder.Services.AddScoped<IDeliveryAssignment, DeliveryAssignmentService>();
             builder.Services.AddHttpClient<OpenRouteServiceClient>();
             builder.Services.Configure<OpenRouteServiceConfig>(builder.Configuration.GetSection("OpenRouteService"));
             builder.Services.AddSingleton(sp =>
-                new OpenRouteServiceClient(
-                    sp.GetRequiredService<HttpClient>(),
-                    sp.GetRequiredService<IOptions<OpenRouteServiceConfig>>().Value
-                ));
+                                     new OpenRouteServiceClient(
+                            sp.GetRequiredService<IOptions<OpenRouteServiceConfig>>(),
+                             sp.GetRequiredService<HttpClient>()
+                                ));
+
+            builder.Services.Configure<OpenRouteServiceConfig>(
+               builder.Configuration.GetSection("OpenRouteService"));
 
 
             var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");

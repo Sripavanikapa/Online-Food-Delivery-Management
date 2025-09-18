@@ -1,20 +1,21 @@
 ﻿using Domain.DTO;
 using Domain.Models;
+using FoodDeliveryProject.DTOs;
 
 namespace Infrastructure.Interfaces
 {
     public interface IUserRepository
     {
         public UserDto CreateUser(UserDto user);
-        IEnumerable<OrderedItemsByUserDto> GetOrdersByUserId(string phno);
+        List<GetOrderDto> GetOrdersByUserId(string phno);
 
-        public IEnumerable<Address> GetAddressesByUserId(string phno);
+        public List<AddressDto> GetAddressesByUserId(string phno);
 
         UpdateUserDto UpdateUser(UpdateUserDto user);
 
         bool DeleteUser(string phno);
         //IEnumerable<AddressDto> GetAddressesByUserId(int userId);
-
+        
 
     }
 }

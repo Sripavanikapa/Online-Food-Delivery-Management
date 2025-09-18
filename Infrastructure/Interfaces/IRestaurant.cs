@@ -21,5 +21,6 @@ namespace FoodDeliveryProject.Repositories
         public List<RestaurantWithFoodDto> RestaurantWithThereFoodItems();
 
         List<RestaurantDto> GetOpenRestaurants();
+        
     }
 }

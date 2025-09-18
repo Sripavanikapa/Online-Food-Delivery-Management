@@ -32,10 +32,10 @@ namespace FoodDeliveryProject.Controllers
 
 
         [Authorize(Roles = "admin,customer,restaurant,deliveryagent")]
-        [HttpGet("Getrestaurantbyrating/{id}")]
-        public IActionResult GetrestaurantbyRating(decimal id)
+        [HttpGet("Getrestaurantbyrating/{rating}")]
+        public IActionResult GetrestaurantbyRating(decimal rating)
         {
-            IEnumerable<ReviewGetRestaurantDto> restaurants = _rating.GetRestaurantNameByRating(id);
+            IEnumerable<ReviewGetRestaurantDto> restaurants = _rating.GetRestaurantNameByRating(rating);
             return Ok(restaurants);
         }
 

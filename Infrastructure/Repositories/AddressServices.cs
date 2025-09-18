@@ -58,14 +58,19 @@ namespace Infrastructure.Repositories
 
         // Get addresses by customer ID
 
-        public List<Address> GetAddressesByPhno(string phno) {
+        public List<AddressDto> GetAddressesByPhno(string phno) {
 
             var custId = _context.Users
                .Where(u => u.Phoneno == phno)
                .Select(u => u.Id)
                .FirstOrDefault();
-            return _context.Addresses.Where(a => a.CustId == custId).ToList();
-            
+            return _context.Addresses.Where(a => a.CustId == custId).Select(a => new AddressDto{
+                                            Address1 = a.Address1,
+                                            Phno=a.Cust.Phoneno
+       
+                                                    })
+                                            .ToList();
+
 
         }
         

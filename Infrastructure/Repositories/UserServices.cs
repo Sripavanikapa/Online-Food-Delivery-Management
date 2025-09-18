@@ -1,7 +1,9 @@
 ﻿using Domain.Data;
 using Domain.DTO;
 using Domain.Models;
+using FoodDeliveryProject.DTOs;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -42,37 +44,75 @@ namespace Infrastructure.Repositories
             };
         }
 
-        public IEnumerable<Address> GetAddressesByUserId(string phno)
+        public List<AddressDto> GetAddressesByUserId(string phno)
         {
             var userId = _context.Users
-                         .Where(u => u.Phoneno == phno)
-                         .Select(u => u.Id)
-                         .FirstOrDefault();
+                .Where(u => u.Phoneno == phno)
+                .Select(u => u.Id)
+                .FirstOrDefault();
 
-            
-            var addres = _context.Addresses.Find(userId);
-            if (addres != null)
-            {
-                return _context.Addresses.Where(a => a.CustId == userId).ToList();
-            }
-            return Enumerable.Empty<Address>();
+            if (userId == 0)
+                return new List<AddressDto>();
+
+            return _context.Addresses
+                .Where(a => a.CustId == userId)
+                .Select(s=>new AddressDto
+                {
+                    Phno=s.Cust.Phoneno,
+                    Address1 = s.Address1
+                }).ToList();
         }
 
 
         //get orders by user id
-        public IEnumerable<OrderedItemsByUserDto> GetOrdersByUserId(string phno)
+        public List<GetOrderDto> GetOrdersByUserId(string phno)
         {
             var userId = _context.Users
-    .Where(u => u.Phoneno == phno)
-    .Select(u => u.Id)
-    .FirstOrDefault();
+                .Where(u => u.Phoneno == phno)
+                .Select(u => u.Id)
+                .FirstOrDefault();
 
-            return _context.OrderDetailsByUserId.FromSqlRaw("exec proc_get_ordersby_userid @userid={0}", userId)
+            if (userId == 0)
+                return new List<GetOrderDto>();
+
+            var orders = _context.Orders
+                .Where(o => o.UserId == userId)
+                .Include(o => o.Restaurant)
+                    .ThenInclude(r => r.User)
                 .ToList();
 
+            var result = new List<GetOrderDto>();
+
+            foreach (var order in orders)
+            {
+                var foodItems = _context.OrderItems
+                    .Where(oi => oi.OrderId == order.OrderId)
+                    .Include(oi => oi.Item)
+                    .Select(oi => new FoodDeliveryProject.DTOs.FoodItemDtoWithPrice
+                    {
+                        ItemName = oi.Item.ItemName,
+                        Price = oi.Item.Price,
+                        Quantity = oi.Quantity,
+                        TotalItemPrice = oi.Item.Price * oi.Quantity
+                    })
+                    .ToList();
+
+                var totalPrice = foodItems.Sum(fi => fi.TotalItemPrice);
+
+                result.Add(new GetOrderDto
+                {
+                    RestaurantName = order.Restaurant.User.Name,
+                    CustomerName = order.User.Name,
+                    TotalPrice = totalPrice,
+                    FoodItems = foodItems
+                });
+            }
+
+            return result;
         }
 
-       public UpdateUserDto UpdateUser(UpdateUserDto user)
+
+        public UpdateUserDto UpdateUser(UpdateUserDto user)
         {
             var existingAddress = _context.Users.FirstOrDefault(u=>u.Phoneno == user.Phoneno);
             if (existingAddress != null)

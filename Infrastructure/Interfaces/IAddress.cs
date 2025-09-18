@@ -11,7 +11,7 @@ namespace Infrastructure.Interfaces
     public interface IAddress
     {
         string CreateAddress(AddressDto addressDto);
-        List<Address> GetAddressesByPhno(string phno);
+        List<AddressDto> GetAddressesByPhno(string phno);
 
         string UpdateAddress( int addid,AddressDto addressDto);
 

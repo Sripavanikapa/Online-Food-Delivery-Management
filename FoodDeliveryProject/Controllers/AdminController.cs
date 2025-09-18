@@ -14,10 +14,12 @@ namespace FoodDeliveryProject.Controllers
     public class AdminController : ControllerBase
     {
         public readonly IAdmin admin;
-        public AdminController(IAdmin admin)
+        private readonly CategoryService categoryService;
+
+        public AdminController(IAdmin admin,CategoryService categoryService)
         {
             this.admin = admin;
-            
+            this.categoryService = categoryService;
         }
 
         // get total users count
@@ -60,18 +62,18 @@ namespace FoodDeliveryProject.Controllers
 
 
 
-        [HttpPut]
-        [Authorize(Roles = "admin")]
-        [Route("ApproverOrBlockUser/{id}/{isValid}")]
-        public IActionResult ApproverOrBlockRestaurant([FromRoute] int id, [FromRoute] bool isValid)
-        {
-            var updated=admin.UpdateUserStatus(id, isValid);
-            if (!updated)
-            {
-                return NotFound(new { message = "not updated user details" });
-            }
-            return Ok(new { message = "user details updated successfully" });
-        }
+        //[HttpPut]
+        //[Authorize(Roles = "admin")]
+        //[Route("ApproverOrBlockUser/{id}/{isValid}")]
+        //public IActionResult ApproverOrBlockRestaurant([FromRoute] int id, [FromRoute] bool isValid)
+        //{
+        //    var updated=admin.UpdateUserStatus(id, isValid);
+        //    if (!updated)
+        //    {
+        //        return NotFound(new { message = "not updated user details" });
+        //    }
+        //    return Ok(new { message = "user details updated successfully" });
+        //}
         
 
 
@@ -102,8 +104,30 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(data);
         }
-        
 
+        [Authorize(Roles = "admin")]
+        [HttpPost("AddCategory")]
+        public ActionResult AddCategory([FromBody] CategoryDto catagoryDto)
+        {
+            var category = categoryService.AddCategory(catagoryDto);
+            if (category == null)
+            {
+                return BadRequest("");
+            }
+            return Ok(category);
+        }
+
+        [Authorize(Roles = "admin,customer,restaurant")]
+        [HttpGet("AllCategories")]
+        public ActionResult<List<string>> GetAllCategories()
+        {
+            List<string> categories = categoryService.GetAllCategories();
+            if (categories == null)
+            {
+                return NotFound($"No category found");
+            }
+            return Ok(categories);
+        }
 
         [Authorize(Roles = "admin")]
         [HttpGet("getAllDeliveryAgents")]
@@ -116,22 +140,31 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(deliveryAgents);
         }
+        [Authorize(Roles = "admin")]
         [HttpPut("{id}/{isValid}/approve")]
-        public async Task<IActionResult> ApproveUser(int id,bool isValid)
+     
+        public async Task<IActionResult> ApproveUser(int id, bool isValid)
         {
             try
             {
-                await admin.ApproveUserAsync(id,isValid);
-                return Ok(new { message = "User approved and SMS sent" });
+                var result = await admin.ApproveUserAsync(id, isValid);
+
+                if (result.Contains("customer", StringComparison.OrdinalIgnoreCase))
+                {
+                    return BadRequest(new { message = result });
+                }
+
+                return Ok(new { message = "sms sent to user"});
             }
             catch (KeyNotFoundException)
             {
-                return NotFound();
+                return NotFound(new { message = "User not found" });
             }
-            catch (Exception ex) {
-                return StatusCode(500, ex.Message);
-            
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
             }
         }
+
     }
 }

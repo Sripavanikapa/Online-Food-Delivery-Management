@@ -15,12 +15,12 @@ namespace Infrastructure.Repositories
 
         List<RestaurantDto> getAllRestaurants();
 
-        bool UpdateUserStatus(int id, bool isValid);
+        //bool UpdateUserStatus(int id, bool isValid);
 
       //  bool DeleteRestauarnt(int id);
 
         bool DeleteUser(int id);
-        Task ApproveUserAsync(int id,bool isValid);
+        Task<string> ApproveUserAsync(int id,bool isValid);
         List<RestaurantOrderSummaryDto> restaurantOrderSummaryDto();
        // bool UpdateDeliveryAgentStatus(int id , bool status);
 

@@ -2,6 +2,7 @@
 using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,7 @@ namespace Infrastructure.Repositories
         {
             return appDbContext.Users.Count();
         }
+        #region UnUsedCode
         //List<UserDto> IAdmin.getUsersByRole(string role)
         //{
         //    var users = appDbContext.Users.Where(u => u.Role == role)
@@ -50,30 +52,35 @@ namespace Infrastructure.Repositories
         //        }).ToList();
         //    return users;
         //}
-        public bool UpdateUserStatus(int id, bool isValid)
-        {
-            var user = appDbContext.Users.FirstOrDefault(x => x.Id == id);
-            if (user == null)
-            {
-                return false;
-            }
-            user.IsValid = isValid;
-            appDbContext.SaveChanges();
-            return true;
-        }
-        public async Task ApproveUserAsync(int id,bool isValid)
+        //public bool UpdateUserStatus(int id, bool isValid)
+        //{
+        //    var user = appDbContext.Users.FirstOrDefault(x => x.Id == id);
+        //    if (user == null)
+        //    {
+        //        return false;
+        //    }
+        //    user.IsValid = isValid;
+        //    appDbContext.SaveChanges();
+        //    return true;
+        //} 
+        #endregion
+        public async Task<string> ApproveUserAsync(int id,bool isValid)
         {
             var user = await appDbContext.Users.FindAsync(id);
             if (user == null)
             {
                 throw new KeyNotFoundException("User not found");
             }
+            if (user.Role == "customer")
+            {
+                return "Customers need not be approved";
+            }
             user.IsValid = isValid;
             appDbContext.Users.Update(user);
             await appDbContext.SaveChangesAsync();
 
 
-            string msg = isValid ? "Your Account has been approved by User." :
+            string msg = isValid ? "Your Account has been approved by Admin." :
                 "Your Account has been blocked by Admin.";
             if (!string.IsNullOrWhiteSpace(user.Phoneno))
             {
@@ -82,7 +89,9 @@ namespace Infrastructure.Repositories
                     msg
                     );
             }
+            return msg;
         }
+        #region UnUsedCode
         //public bool DeleteRestauarnt(int id)
         //{
         //    var restaurantToBeDelete=appDbContext.Restaurants.FirstOrDefault(x=>x.RestaurantId == id);
@@ -93,7 +102,8 @@ namespace Infrastructure.Repositories
         //    appDbContext.Remove(restaurantToBeDelete);
         //    appDbContext.SaveChanges();
         //    return true;
-        //}
+        //} 
+        #endregion
         public bool DeleteUser(int id)
         {
             var userToBeDeleted=appDbContext.Users.FirstOrDefault(x=>x.Id == id);
@@ -117,6 +127,7 @@ namespace Infrastructure.Repositories
                 }).ToList();
             return result;
         }
+        #region UnUsed
         //public bool UpdateDeliveryAgentStatus(int id,bool status)
         //{
         //    var agent = appDbContext.DeliveryAgents.Find(id);
@@ -127,7 +138,8 @@ namespace Infrastructure.Repositories
         //    agent.Status = status;
         //    appDbContext.SaveChanges();
         //    return true;
-        //}
+        //} 
+        #endregion
         public List<DeliveryAgentDto> getDeliveryAgents()
         {
             return appDbContext.DeliveryAgents.Select(u=>new DeliveryAgentDto

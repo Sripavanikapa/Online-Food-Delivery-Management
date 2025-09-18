@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\2440159\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {}
+    "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\2440159\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
+    "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2440159\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
+        "projectUniqueName": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
         "projectName": "Testing",
-        "projectPath": "C:\\Users\\2440159\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
-        "packagesPath": "C:\\Users\\2440159\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2440159\\source\\repos\\OnlineFoodDeliverymanagement\\Testing\\obj\\",
+        "projectPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj",
+        "packagesPath": "C:\\Users\\2440012\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Testing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\2440159\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\2440012\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

@@ -75,5 +75,13 @@ namespace FoodDeliveryProject.Controllers
             }
             return NotFound("Cannot find the item in Database");
         }
+        [Authorize(Roles = "customer,admin")]
+        [HttpGet("get/foodItemsByRestaurant/{name}")]
+        public IActionResult GetFoodItemsByRestaurant([FromRoute] string name)
+        {
+            var foodItemsByRestaurant=_foodItemsService.GetFoodItemsByRestaurant(name);
+            return Ok(foodItemsByRestaurant);
+        }
+
     }
 }

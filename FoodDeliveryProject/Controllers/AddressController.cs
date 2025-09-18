@@ -52,7 +52,7 @@ namespace FoodDeliveryProject.Controllers
         [Authorize(Roles = "customer,restaurant,deliveryagent")]
         [HttpGet("get/addresses")]
 
-        public ActionResult GetAddressesByCustomerId([FromQuery]string phno)
+        public ActionResult<AddressDto> GetAddressesByCustomerId([FromQuery]string phno)
         {
             var addresses = _address.GetAddressesByPhno(phno);
             if (addresses == null || addresses.Count == 0)
