@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d80000;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+ 
+ 
+  background-size: cover;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.main-agent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 80vh; 
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 0;
+  
+  text-align: center;
+  overflow-y: auto;
+}
+
+
+.agent-heading {
+  font-size: 30px;
+  margin-bottom: 35px;
+  color: #000000;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+
+.button-group button {
+  background-color: #e60000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #ff3333;
+  transform: scale(1.05);
+}
+
+
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 150px;
+}
+
+.duty-button,
+.logout-button {
+  background-color: #ffffff;
+  color: #ff0000;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.duty-button:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

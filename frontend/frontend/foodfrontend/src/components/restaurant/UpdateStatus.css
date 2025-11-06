@@ -1,0 +1,28 @@
+.status-container {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.status-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.status-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.status-container button {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.status-container button:hover {
+  background-color: #023e8a;
+}

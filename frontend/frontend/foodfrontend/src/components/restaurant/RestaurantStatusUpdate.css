@@ -1,0 +1,61 @@
+
+.status-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.status-container h2 {
+  font-size: 28px;
+  color:rgba(235, 0, 41, 1);
+  margin-bottom: 20px;
+}
+
+
+.status-container p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.status-container strong {
+  color: #2a9d8f;
+}
+
+
+.status-container button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: rgba(235, 0, 41, 1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.status-container button:hover {
+  background-color:rgba(235, 0, 41, 1);
+  transform: scale(1.05);
+}
+
+.status-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.status-loading,
+.status-error {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-top: 40px;
+}

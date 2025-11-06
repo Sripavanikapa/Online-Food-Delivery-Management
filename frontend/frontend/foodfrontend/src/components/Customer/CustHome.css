@@ -1,0 +1,27 @@
+
+.Animation-div{
+    margin-bottom: 5%;
+   margin-top: 5%;
+    width:100vw;
+    height: 100vh;
+   overflow-y: hidden;
+}
+.navbar-div{  
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.custFooter-div{
+    margin-top: 12%;
+}
+.App{
+    overflow-x: hidden;
+}
+.Category-div{
+    margin-bottom: 10%;
+}
+
+.custservices-div{
+    margin-top: 5%;
+}

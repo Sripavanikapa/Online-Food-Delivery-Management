@@ -1,0 +1,108 @@
+.section-card-admin {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.section-card-admin h2 {
+  color: #E74C3C;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+
+.tabs-admin {
+  margin-bottom: 20px;
+}
+
+.tab-list-admin {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #eee;
+}
+
+.tab-item-admin {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.3s ease;
+}
+
+.tab-item-admin:hover {
+  background-color: #f9f9f9;
+}
+
+.tab-item-admin.active-admin {
+  background-color: #E74C3C;
+  color: #fff;
+}
+
+
+.data-table-admin {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table-admin th, .data-table-admin td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table-admin th {
+  background: #f9f9f9;
+  color: #333;
+  font-weight: 600;
+}
+
+
+.status-badge-admin {
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.status-badge-admin.active-admin { background-color: #27ae60; }
+.status-badge-admin.inactive-admin { background-color: #f39c12; }
+.status-badge-admin.deleted-admin { background-color: #7f8c8d; }
+
+
+.btn-action-admin {
+  background-color: #E74C3C;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-action-admin:hover { background-color: #c0392b; }
+.btn-action-admin:disabled { background-color: #ccc; cursor: not-allowed; }
+.btn-delete-admin { background-color: #555; }
+.btn-delete-admin:hover { background-color: #333; }
+
+@media (max-width: 768px) {
+  .tab-list-admin {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .data-table-admin th, .data-table-admin td {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,73 @@
+.orders-container-admin {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.orders-container-admin h2 {
+  color: #E74C3C;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+
+.filter-input-admin {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+.orders-table-admin {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table-admin th,
+.orders-table-admin td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.orders-table-admin th {
+  background: #f9f9f9;
+  color: #333;
+  font-weight: 600;
+}
+
+
+.assign-btn-admin {
+  background-color: #E74C3C;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.assign-btn-admin:hover {
+  background-color: #c0392b;
+}
+
+.assign-btn-admin:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+  .orders-table-admin th,
+  .orders-table-admin td {
+    font-size: 14px;
+  }
+}

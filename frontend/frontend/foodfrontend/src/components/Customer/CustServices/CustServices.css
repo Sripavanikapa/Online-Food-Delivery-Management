@@ -1,0 +1,25 @@
+.service-subheading{
+    font-size: 12;
+    font-family: Poppins;
+    color: #EB0029;
+    letter-spacing: 6px; 
+    text-align: center;   
+}
+.service-heading{
+    font-size: 40px;
+    font-family: Rubik;
+    color: #010F1C;
+    text-align: center;
+
+}
+#first-col-service,#second-col-service,#third-col-service{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2%;
+    text-align: center;
+}
+#first-col-service{
+    margin-top: 24px;;
+}
+#services{
+    margin-left: 8%;;
+}

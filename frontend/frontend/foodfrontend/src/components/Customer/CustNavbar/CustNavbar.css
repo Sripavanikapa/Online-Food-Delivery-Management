@@ -1,0 +1,143 @@
+.full-navbar-container {
+  background-color: #e50914; /* or use rgba(229, 9, 20, 0.95) for slight transparency */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed; /* changed from absolute to fixed for persistent visibility */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 30px 0;
+}
+
+
+
+.navbar-logo-area {
+    display: flex;
+    align-items: center;
+    
+    width: 40%; 
+    padding-left: 30px;
+     
+}
+
+.logo-box {
+    background-color: #e50914; 
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.logo-icon {
+    width: 20px; 
+    height: auto;
+    text-decoration: none;
+}
+
+.logo-text {
+    color: white; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.logo-link{
+    text-decoration: none;
+}
+
+
+.navbar-content-area {
+    display: flex;
+   
+    color: white; 
+    width: 60%; 
+    padding-right: 30px;
+    justify-content: flex-end;
+   
+}
+
+
+.nav-links-group {
+    display: flex;
+    text-align: left;
+}
+
+.nav-links-group a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-right: 45px;
+    transition: opacity 0.2s;
+}
+
+.nav-links-group a:hover {
+    opacity: 0.8;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 35px;
+    padding: 0;
+}
+
+
+.search-bar-box-customer{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius:5px;
+    border-width: none;
+  
+    margin-right: 20px;
+    width: 370px;
+    height: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    color: #333; 
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.search-bar-box-customer input {
+    border: none;
+    background: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 0;
+    border-radius: 0%;
+    border-width: 0cap;
+    outline: none;
+    width: 450px;
+    height: 40px; 
+}
+
+.search-bar-box-customer input::placeholder {
+    color: #aaa;
+}
+
+
+
+
+.profile-btn {
+    
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display:contents;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+}
+

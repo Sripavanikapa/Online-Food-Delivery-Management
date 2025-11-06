@@ -1,0 +1,69 @@
+
+.background-container {
+    display: flex;
+    height: 100vh; 
+    width: 100vw; 
+    background-color:  #EB0029; 
+}
+
+
+.background-left-section {
+    flex: 38; 
+     background-image: url('../../../assets/pizza-img.png');   
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+.background-right-section {
+    flex: 65; 
+   
+    display: flex; 
+    flex-direction: column;
+   padding: 30px;
+
+}
+.chopsticks{
+    position: relative;
+    left:250px;
+    top:-250px;
+}
+.onion{
+    position: relative;
+    left:-30px;
+    top:-50px;
+}
+.burger{
+    position: relative;
+    left:390px;
+    top:70px;
+}
+.fork{
+     position: relative;
+    left:120px;
+    top:100px;
+}
+.broccoli{
+      position: relative;
+    left:350px;
+    top:-180px;
+}
+.background-text{
+    margin-left: 25%;
+}
+.hero-text-content {
+        margin-top: 25%; 
+        padding: 0 20px;
+        color: white;
+        text-align: left;
+        font-family: Port Lligat Sans;
+    }
+    
+    .hero-text-content h1 {
+        font-size: 2.5rem; 
+    }
+
+

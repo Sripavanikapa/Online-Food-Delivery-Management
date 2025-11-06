@@ -1,0 +1,37 @@
+#footer-heading{
+    font-size: 40;
+    padding-left: 2%;
+  
+}
+
+#footer-p{
+    font-size: small;
+    text-align: justify;
+}
+#sec-col{
+    margin-left: 6%;
+}
+
+#footer-icon{
+    padding-right: 5%;
+}
+#first-col,#sec-col,#third-col{
+    padding-right: 10%;
+}
+
+#footer-heading{
+    text-align: left;
+}
+#footer{
+    margin-left: 10%;
+
+   
+}
+
+.footer-btn{
+    border-width: 0cap;
+    background-color: white;
+}
+#contact{
+   padding:5%;
+}

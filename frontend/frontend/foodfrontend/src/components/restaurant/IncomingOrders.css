@@ -1,0 +1,43 @@
+.orders-container-res {
+  padding: 20px;
+  margin-left: 250px;
+  max-width: calc(100% - 250px);
+  box-sizing: border-box;
+}
+
+.orders-list-res {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-card-res {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.order-actions-res {
+  margin-top: 10px;
+}
+
+.order-actions-res button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.order-actions-res button:first-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.order-actions-res button:last-child {
+  background-color: #f44336;
+  color: white;
+}
