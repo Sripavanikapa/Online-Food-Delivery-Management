@@ -1,0 +1,69 @@
+wwwroot\images\category\015ec065-34d6-4f65-b7c5-510b4d85571e_thai food.png
+wwwroot\images\category\0e732a52-c9f8-4e23-a382-cfc1e2afbc85_malasian.png
+wwwroot\images\category\1c44e844-d666-46db-a881-5dd5a452bfab_Milkshake.jpg
+wwwroot\images\category\4a287729-1234-4f91-8303-781d66c9aead_fast food.png
+wwwroot\images\category\578a1e12-34bd-4a99-84f1-9b52e2c6281e_starters.png
+wwwroot\images\category\58323ad1-660c-4762-b058-7c5831ea3f87_heavy snack.png
+wwwroot\images\category\6317e635-0265-440d-bba2-8901ffaffd51_chineese food.png
+wwwroot\images\category\73576091-222a-4890-a9ea-dbad4f3c03e2_cake.webp
+wwwroot\images\category\76e25dcd-7372-4c94-9f45-be45ef6fda76_cake.webp
+wwwroot\images\category\a5a9197c-3147-4c58-8161-b7e4a4fec721_malasian.png
+wwwroot\images\category\ad092f21-713f-4f35-9384-97c562789a4a_bakery and snacks.png
+wwwroot\images\category\b86a3a35-33e0-4c17-859e-3cb98e010bc2_malasian.png
+wwwroot\images\category\d1052391-6610-4b1e-9c10-52f166ffb75c_malasian.png
+wwwroot\images\category\d1f61706-cf1c-4613-9808-e43523329537_asian food.png
+wwwroot\images\category\ff442784-9478-467e-9fd4-c665515bb7e5_street food.png
+wwwroot\images\fooditems\0455eaea-86c7-4dab-b384-fae36c85ae5c_restaurant icon.png
+wwwroot\images\fooditems\067cac54-f60f-4b43-bec5-09fb9eaacad5_veg hakka noodles.png
+wwwroot\images\fooditems\08a9496c-a7e1-4512-b35e-7be77b6026a7_Tinkani Chicken Bowl.png
+wwwroot\images\fooditems\0d75da1d-0c3c-4041-a6d0-9702b29789d3_egg omlet.png
+wwwroot\images\fooditems\0dd8054a-5a9f-48c3-997d-f0fe7082aac3_veg puff.jpg
+wwwroot\images\fooditems\16203c97-c3bd-4f1e-8eef-455b4d83fce5_chocolate icecream.webp
+wwwroot\images\fooditems\230b65e7-aba0-42b3-816c-932f8c0e8a91_egg fried rice.png
+wwwroot\images\fooditems\253fe0e4-fa0b-40e7-9363-6b2d98e1688f_Bread Omlet.jpg
+wwwroot\images\fooditems\3a2be9b1-7428-4cf4-8659-d7ae5e906750_Chilli Paneer.jpg
+wwwroot\images\fooditems\3c1a35f3-475b-4aea-943b-4c14ae80cacb_veg hakka noodles.png
+wwwroot\images\fooditems\4197c157-2113-4768-8237-e90f7466ee25_egg fried rice.png
+wwwroot\images\fooditems\45cd72b2-f3ce-4704-afe6-2f5aac8f22cf_Aloo chat.jpg
+wwwroot\images\fooditems\4801ebf7-e16f-4ca7-b1f2-e0c45389068d_Honey Chilli Califlower.jpg
+wwwroot\images\fooditems\4ff90bc2-69b4-4b32-a553-52a51bcc7cca_chicken curry.png
+wwwroot\images\fooditems\53ef65fd-1303-4082-91a5-562a3b3160b7_roti.png
+wwwroot\images\fooditems\591357ba-9e6a-431f-ac38-f09cf67d0494_pizza-img.png
+wwwroot\images\fooditems\5a560087-64a8-4707-acce-854620239c77_Pizza.png
+wwwroot\images\fooditems\5d726a36-77b0-4486-a58c-e85507b63073_pizza-img.png
+wwwroot\images\fooditems\5d938b32-056a-48d1-80fb-7d62a0641ba3_veg hakka noodles.png
+wwwroot\images\fooditems\63e06b99-9931-4b27-98bc-809b10e50799_Chicken Fried rice.png
+wwwroot\images\fooditems\679f8933-0bfc-41aa-b70a-6edce93b48b7_sushi roll.png
+wwwroot\images\fooditems\6c42152b-1f0a-40be-81de-970c0d6bbaf0_vada pav.png
+wwwroot\images\fooditems\6fbe8ce6-6507-4f87-8ca2-1f872feab1da_Ellipse 18 (1).png
+wwwroot\images\fooditems\6fe3e387-9fab-497d-958d-2bf22548d5ae_egg fried rice.png
+wwwroot\images\fooditems\74a0899c-ddab-4af7-8404-3b4954121da0_Choolate Donut.jpg
+wwwroot\images\fooditems\783bfe9f-a4c7-4186-a4f5-92d962a7dde2_Pizza.png
+wwwroot\images\fooditems\7c2af39e-8070-44c8-a972-1ce304be1b10_vada pav.png
+wwwroot\images\fooditems\8aaa4618-2af7-4630-b750-33cb8fb5633f_Pizza.png
+wwwroot\images\fooditems\90979359-6291-4503-9003-5e2f6d930680_french fries.webp
+wwwroot\images\fooditems\91a6aa2f-c6ec-4f82-a54a-e8160c9ca886_vada pav.png
+wwwroot\images\fooditems\96ab0e4a-2a9d-439e-9392-4bf25972c11f_chicken curry.png
+wwwroot\images\fooditems\9c8e3163-83ae-474b-9e27-770168178b3d_Chocolate Cake.jpg
+wwwroot\images\fooditems\a094c624-a0d6-4050-822c-a7fc28300574_vada pav.png
+wwwroot\images\fooditems\a0fa8aff-5880-4159-80a3-51ab6f1eb254_Aloo tikki.jpg
+wwwroot\images\fooditems\a77b7aff-34ae-4019-b45b-c59e1c56faa9_spicy roti.png
+wwwroot\images\fooditems\ba2dc50a-24a2-4720-9951-014614f3e260_egg fried rice.png
+wwwroot\images\fooditems\baa4cc9b-a589-4be8-8c00-4b09781cc728_chicken curry.png
+wwwroot\images\fooditems\c0aa789a-e6c2-4ae8-8e2f-ae0849c65faa_Veg Manchurian Balls.jpg
+wwwroot\images\fooditems\c37e662c-c049-43e8-b1c6-5819c5b08857_Bread Omlet.jpg
+wwwroot\images\fooditems\c4d43840-d787-4c16-8536-cb9c31bc55aa_Chocolate Cake.jpg
+wwwroot\images\fooditems\c5d650a9-118d-4ea0-9ce7-981a7132fed0_Thai-Green-Curry.webp
+wwwroot\images\fooditems\cd85f0ce-40fd-485a-a5f6-08685161575f_Bread Omlet.jpg
+wwwroot\images\fooditems\cf80d78c-e11c-4bf5-ab96-fb323b43f78e_vada pav.png
+wwwroot\images\fooditems\da313eaf-60a0-4e65-8e3d-4ce4f489053e_Butterscortch milkshake.webp
+wwwroot\images\fooditems\da54aa0b-3602-4134-b767-ef4e52ef9549_Pad-Thai Noodles.jpg
+wwwroot\images\fooditems\e0887804-33e9-4427-bdd5-64c76d0c4c47_chicken curry.png
+wwwroot\images\fooditems\e7700def-3bf8-43d0-85c8-1fc2cf6d064f_Chocolate Cake.jpg
+wwwroot\images\fooditems\ec7ab0dc-4635-4106-a929-590659ae30c8_vada pav.png
+wwwroot\images\fooditems\edbc36d4-ff89-41dc-879f-36c88ceee956_Strawberry Banana Mikshake.webp
+wwwroot\images\fooditems\edf4a347-9409-4982-8932-cb04093b261a_chicken dum biryani.png
+wwwroot\images\fooditems\f2c2e912-9155-4271-88b3-b2d12f027531_Chicken manchurian.png
+wwwroot\images\fooditems\f40d96b6-82ae-41e8-8fbe-2ec82f871e00_Chicken manchurian.png
+wwwroot\images\fooditems\fb752160-168d-41a7-9886-4fa08063cb4f_paneer tikka.jpg
+wwwroot\images\fooditems\fd4ed120-2642-474a-8685-11f8b231b180_cheese burger.jpg

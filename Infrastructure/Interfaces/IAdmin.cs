@@ -1,5 +1,6 @@
 ﻿using Domain.DTO;
 using Domain.Models;
+using FoodDeliveryProject.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,12 @@ namespace Infrastructure.Repositories
        // List<UserDto> getUsersByRole(string role);
 
         List<RestaurantDto> getAllRestaurants();
+        int getAllRestaurantsCount();
 
+        int getAllOrdersCount();
         //bool UpdateUserStatus(int id, bool isValid);
 
-      //  bool DeleteRestauarnt(int id);
+        //  bool DeleteRestauarnt(int id);
 
         bool DeleteUser(int id);
         Task<string> ApproveUserAsync(int id,bool isValid);
@@ -27,6 +30,7 @@ namespace Infrastructure.Repositories
         List<DeliveryAgentDto> getDeliveryAgents();
 
         List<AdminUser> getCustomers();
-
+        List<RestaurantOrderCountDto> Top5Restaurant();
+        public List<GetOrderDto> GetAllOrders();
     }
 }

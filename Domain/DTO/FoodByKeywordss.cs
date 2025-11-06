@@ -28,5 +28,9 @@ namespace Domain.DTO
         [Column("Description")]
 
         public string Description { get; set; }
+        
+
+    [Column("imageurl")] 
+        public string? imageUrl { get; set; }
     }
 }

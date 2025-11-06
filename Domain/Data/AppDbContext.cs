@@ -187,27 +187,74 @@ namespace Domain.Data
                     .OnDelete(DeleteBehavior.Restrict)
                     .HasConstraintName("FK__orders__user_id__45F365D3");
             });
+            modelBuilder.Entity<OrderItem>()
+               .HasKey(oi => new { oi.OrderId, oi.ItemId });
 
+            // OrderItem -> FoodItem (Item)
+            modelBuilder.Entity<OrderItem>()
+          .HasKey(oi => new { oi.OrderId, oi.ItemId }); // Optional composite key
+
+            modelBuilder.Entity<OrderItem>()
+                .HasOne(oi => oi.Item)
+                .WithMany(fi => fi.OrderItems)
+                .HasForeignKey(oi => oi.ItemId)
+                .IsRequired();
+
+            modelBuilder.Entity<OrderItem>()
+                .HasOne(oi => oi.Order)
+                .WithMany(o => o.OrderItems)
+                .HasForeignKey(oi => oi.OrderId)
+                .IsRequired();
+            modelBuilder.Entity<OrderItem>()
+    .HasOne(oi => oi.Item)
+    .WithMany(fi => fi.OrderItems)
+    .HasForeignKey(oi => oi.ItemId)
+    .OnDelete(DeleteBehavior.Restrict); // Optional: prevent cascade delete
+
+            //modelBuilder.Entity<OrderItem>(entity =>
+            //{
+            //    entity
+            //        .HasNoKey()
+            //        .ToTable("order_items");
+
+            //    entity.Property(e => e.ItemId).HasColumnName("item_id");
+            //    entity.Property(e => e.OrderId).HasColumnName("order_id");
+            //    entity.Property(e => e.Quantity).HasColumnName("quantity");
+
+            //    entity.HasOne(d => d.Item).WithMany()
+            //        .HasForeignKey(d => d.ItemId)
+            //        .OnDelete(DeleteBehavior.Restrict)
+            //        .HasConstraintName("FK__order_ite__item___49C3F6B7");
+
+            //    entity.HasOne(d => d.Order).WithMany()
+            //        .HasForeignKey(d => d.OrderId)
+            //        .OnDelete(DeleteBehavior.Restrict)
+            //        .HasConstraintName("FK__order_ite__order__48CFD27E");
+            //});
             modelBuilder.Entity<OrderItem>(entity =>
             {
-                entity
-                    .HasNoKey()
-                    .ToTable("order_items");
+                entity.HasKey(e => new { e.OrderId, e.ItemId });
+
+                entity.ToTable("order_items");
 
                 entity.Property(e => e.ItemId).HasColumnName("item_id");
                 entity.Property(e => e.OrderId).HasColumnName("order_id");
                 entity.Property(e => e.Quantity).HasColumnName("quantity");
 
-                entity.HasOne(d => d.Item).WithMany()
-                    .HasForeignKey(d => d.ItemId)
+                entity.HasOne(e => e.Item)
+                    .WithMany(fi => fi.OrderItems)
+                    .HasForeignKey(e => e.ItemId)
                     .OnDelete(DeleteBehavior.Restrict)
                     .HasConstraintName("FK__order_ite__item___49C3F6B7");
 
-                entity.HasOne(d => d.Order).WithMany()
-                    .HasForeignKey(d => d.OrderId)
+                entity.HasOne(e => e.Order)
+                    .WithMany(o => o.OrderItems)
+                    .HasForeignKey(e => e.OrderId)
                     .OnDelete(DeleteBehavior.Restrict)
                     .HasConstraintName("FK__order_ite__order__48CFD27E");
             });
+
+
 
             modelBuilder.Entity<Restaurant>(entity =>
             {
@@ -283,6 +330,7 @@ namespace Domain.Data
                     .IsUnicode(false)
                     .HasColumnName("role");
             });
+
 
             OnModelCreatingPartial(modelBuilder);
         }

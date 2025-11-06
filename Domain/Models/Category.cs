@@ -11,7 +11,7 @@ public partial class Category
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int CategoryId { get; set; }
-
+    public string? ImageUrl { get; set; }
     public required string Name { get; set; }
 
     public virtual ICollection<FoodItem> FoodItems { get; set; } = new List<FoodItem>();

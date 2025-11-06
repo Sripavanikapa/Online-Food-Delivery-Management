@@ -20,7 +20,7 @@ namespace FoodDeliveryProject.Controllers
 
         //for delivery agent
 
-        [Authorize(Roles = "DeliveryAgent")]
+        [Authorize(Roles = "admin,deliveryagent,customer")]
         [HttpGet("DeliveryDetailsByOrderId/{orderId}")]
         public ActionResult<DeliveryDto> GetDeliveryDetailsByOrderId(int orderId)
         {

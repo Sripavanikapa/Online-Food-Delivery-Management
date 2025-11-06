@@ -8,11 +8,11 @@ namespace Domain.DTO
 {
     public class OrderItemDto
     {
-
-        public string ItemName { get; set; } = null!;
-        public decimal Price { get; set; }
+        public int ItemId { get; set; }
+   
+      
         public int Quantity { get; set; }
-        public decimal TotalItemPrice { get; set; }
+    
 
 
     }

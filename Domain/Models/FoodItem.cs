@@ -10,27 +10,30 @@ public partial class FoodItem
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+   
     public int ItemId { get; set; }
 
-    public required int RestaurantId { get; set; }
+    public  int RestaurantId { get; set; }
+    public string? ImageUrl { get; set; }
 
-    public required string ItemName { get; set; }
+    public  string ItemName { get; set; }
 
-    public required decimal Price { get; set; }
+    public  decimal Price { get; set; }
 
-    public required decimal Rating { get; set; }
+    public  decimal Rating { get; set; }
 
-    public required int CategoryId { get; set; }
+    public  int CategoryId { get; set; }
 
-    public required bool Status { get; set; }
+    public  bool Status { get; set; }
 
-    public required string Description { get; set; }
+    public  string Description { get; set; }
 
-    public required string Keywords {  get; set; }
+    public  string Keywords {  get; set; }
 
     public virtual Category? Category { get; set; }
 
     public virtual Restaurant? Restaurant { get; set; }
 
-
+    public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

@@ -13,11 +13,13 @@ namespace Infrastructure.Repositories
     {
         private readonly OpenRouteServiceClient openRouteServiceClient;
         private readonly AppDbContext appDbContext;
+        private readonly ISmsService smsService;
 
-        public DeliveryAssignmentService(OpenRouteServiceClient openRouteServiceClient, AppDbContext appDbContext)
+        public DeliveryAssignmentService(OpenRouteServiceClient openRouteServiceClient, AppDbContext appDbContext,ISmsService smsService)
         {
             this.openRouteServiceClient = openRouteServiceClient;
             this.appDbContext = appDbContext;
+            this.smsService = smsService;
         }
 
         public async Task<Delivery> AssignOrderAsync(Order order, Restaurant restaurant, User customer, List<DeliveryAgent> availableDeliveryAgents)
@@ -45,10 +47,12 @@ namespace Infrastructure.Repositories
             var (restaurantLat, restaurantLng) = await openRouteServiceClient.GeocodeAddressAsync(restaurantAddress);
             var (customerLat, customerLng) = await openRouteServiceClient.GeocodeAddressAsync(customerAddress);
             var routeToCustomer = await openRouteServiceClient.GetRouteAsync(restaurantLat, restaurantLng, customerLat, customerLng);
-
+            var validAgents = availableDeliveryAgents
+          .Where(a=> a.Agent.Role == "deliveryagent" )
+        .ToList();
             var agentDistances = new List<(DeliveryAgent Agent, double Distance, double Duration)>();
 
-            foreach (var agent in availableDeliveryAgents)
+            foreach (var agent in validAgents)
             {
                 var agentAddress = agent.Agent?.Addresses?.FirstOrDefault()?.Address1;
                 if (string.IsNullOrWhiteSpace(agentAddress))
@@ -77,6 +81,13 @@ namespace Infrastructure.Repositories
 
             appDbContext.Deliveries.Add(delivery);
             await appDbContext.SaveChangesAsync();
+            var agentUser = await appDbContext.Users.FirstOrDefaultAsync(u => u.Id == bestAgent.AgentId);
+            if (agentUser != null && !string.IsNullOrWhiteSpace(agentUser.Phoneno))
+            {
+                string message = $"Hi {agentUser.Name}, you have been assigned a new delivery order (Order ID: {order.OrderId}). Please check your dashboard.";
+                await smsService.SendSmsAsync(agentUser.Phoneno, message);
+            }
+
 
             return delivery;
         }

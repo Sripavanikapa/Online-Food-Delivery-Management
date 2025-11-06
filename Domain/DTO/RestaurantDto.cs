@@ -6,5 +6,9 @@
         public bool Status { get; set; }
 
         public string?  OwnerName { get; set; }
+        public bool IsValid { get; set; }
+       
+        public string? Phoneno { get; set; }
+        public string? Address { get; set; }
     }
 }

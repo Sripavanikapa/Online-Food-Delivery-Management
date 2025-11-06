@@ -19,7 +19,7 @@ namespace FoodDeliveryProject.Controllers
             this.appDbContext = appDbContext;
         }
         [HttpPost("assign")]
-        public async Task<IActionResult> AssignDeliveryAgent([FromBody] int orderId)
+        public async Task<IActionResult> AssignDeliveryAgent([FromQuery] int orderId)
         {
             var order = await appDbContext.Orders.FindAsync(orderId);
             if (order == null)

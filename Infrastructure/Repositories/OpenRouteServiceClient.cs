@@ -40,7 +40,7 @@ public async Task<(double Distance, double Duration)> GetRouteAsync(
 
             using var doc = JsonDocument.Parse(content);
 
-            // ✅ Case 1: Standard response with routes
+            
             if (doc.RootElement.TryGetProperty("routes", out var routes) && routes.GetArrayLength() > 0)
             {
                 var summary = routes[0].GetProperty("summary");
@@ -49,7 +49,7 @@ public async Task<(double Distance, double Duration)> GetRouteAsync(
                 return (distance, duration);
             }
 
-            // ✅ Case 2: Edge case response with features
+           
             if (doc.RootElement.TryGetProperty("features", out var features) && features.GetArrayLength() > 0)
             {
                 var props = features[0].GetProperty("properties");

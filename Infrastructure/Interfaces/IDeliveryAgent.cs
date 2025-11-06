@@ -13,5 +13,6 @@ namespace Infrastructure.Interfaces
         List<AllDeliveryDto> GetDeliveriesByAgentPhone(string agentPhoneNo);
         bool UpdateDeliveryStatus(int DeliveryId);
         List<DeliveryAgentDto> GetAvailableAgents();
+        public List<OrderHistoryDto> GetOrderHistoryForAgent(int agentId);
     }
 }

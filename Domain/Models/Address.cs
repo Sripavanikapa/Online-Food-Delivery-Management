@@ -14,6 +14,7 @@ public partial class Address
     public required int CustId { get; set; }
 
     public required string Address1 { get; set; }
+   
 
     public  virtual User? Cust { get; set; }
 }

@@ -1,8 +1,10 @@
 ﻿using Domain.Data;
 using Domain.DTO;
 using Domain.Models;
+using FoodDeliveryProject.DTOs;
 using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,15 +26,20 @@ namespace Infrastructure.Repositories
 
         public List<RestaurantDto> getAllRestaurants()
         {
-          
-            return appDbContext.Restaurants.Select(u=>new RestaurantDto
-            {
-                RestaurantId=u.RestaurantId,
-                OwnerName=u.User.Name,
-                Status = u.Status
-            }).ToList();
-        
+            return appDbContext.Restaurants
+                .Select(r => new RestaurantDto
+                {
+                    RestaurantId = r.RestaurantId,
+                    OwnerName = r.User.Name,
+                    Phoneno = r.User.Phoneno,
+                    Address = r.User.Addresses
+                        .Select(a => a.Address1)
+                        .FirstOrDefault() ?? "N/A",
+                    Status = r.Status,
+                    IsValid = r.User.IsValid
+                }).ToList();
         }
+
 
         public int getAllUsersCount()
         {
@@ -142,12 +149,15 @@ namespace Infrastructure.Repositories
         #endregion
         public List<DeliveryAgentDto> getDeliveryAgents()
         {
-            return appDbContext.DeliveryAgents.Select(u=>new DeliveryAgentDto
-            {
-                AgentId=u.AgentId,
-               
-                //Status=u.Status
-            }).ToList();
+            return appDbContext.DeliveryAgents
+                .Select(u => new DeliveryAgentDto
+                {
+                    AgentId = u.AgentId,
+                    AgentName = u.Agent.Name,
+                    Phoneno = u.Agent.Phoneno,
+                    IsValid = u.Agent.IsValid,
+                    IsActive = u.Agent.IsActive // or derive from status if needed
+                }).ToList();
         }
 
         public List<AdminUser> getCustomers()
@@ -156,7 +166,7 @@ namespace Infrastructure.Repositories
                 .Select(x => new AdminUser
                 {
                     
-                    
+                    Id=x.Id,
                     Name = x.Name,
                     Phoneno = x.Phoneno,
                     IsValid = x.IsValid,
@@ -164,5 +174,115 @@ namespace Infrastructure.Repositories
                 }).ToList();
             return Customers;
         }
+        public int getAllRestaurantsCount()
+
+        {
+
+            return appDbContext.Users
+
+           .Where(u => u.Role == "restaurant")
+
+           .Count();
+
+        }
+        public int getAllOrdersCount()
+
+        {
+
+            return appDbContext.Orders.Count();
+
+        }
+        public List<RestaurantOrderCountDto> Top5Restaurant()
+
+        {
+
+            var joinedData = appDbContext.Users.Join(appDbContext.Orders,
+
+                user => user.Id,
+
+                order => order.RestaurantId,
+
+                (user, order) => new
+
+                {
+
+                    user.Id,
+
+                    user.Name,
+
+                    order
+
+                }
+
+            );
+
+            var groupedCounts = joinedData.GroupBy(
+
+                x => new { x.Id, x.Name },
+
+                (key, g) => new RestaurantOrderCountDto
+
+                {
+
+                    Name = key.Name,
+
+                    Orders = g.Count()
+
+                }
+
+            );
+
+            var orderedResults = groupedCounts.OrderByDescending(dto => dto.Orders);
+
+            var top5Results = orderedResults.Take(5);
+
+            return top5Results.ToList();
+        }
+        public List<GetOrderDto> GetAllOrders()
+        {
+            // Preload deliveries with full navigation to DeliveryAgent and User
+            var deliveries = appDbContext.Deliveries
+                .Include(d => d.Agent)
+                    .ThenInclude(da => da.Agent) // da.Agent is the User
+                .ToList();
+
+            // Preload orders with related data
+            var orders = appDbContext.Orders
+                .Include(o => o.User)
+                .Include(o => o.Restaurant)
+                    .ThenInclude(r => r.User)
+                .Include(o => o.OrderItems)
+                .ToList();
+
+            // Project into DTO
+            var result = orders.Select(order =>
+            {
+                var delivery = deliveries.FirstOrDefault(d => d.OrderId == order.OrderId);
+
+                var totalPrice = order.OrderItems
+                    .Join(appDbContext.FoodItems,
+                          oi => oi.ItemId,
+                          fi => fi.ItemId,
+                          (oi, fi) => fi.Price * oi.Quantity)
+                    .Sum();
+
+                return new GetOrderDto
+                {
+                    id = order.OrderId,
+                    CustomerName = order.User.Name,
+                    RestaurantName = order.Restaurant.User.Name,
+                    AgentId = delivery?.AgentId ?? 0,
+                    AgentName = delivery?.Agent?.Agent?.Name ?? "Unassigned",
+                    TotalPrice = totalPrice
+                };
+            }).ToList();
+
+            return result;
+        }
+
+
+
+
+
     }
 }

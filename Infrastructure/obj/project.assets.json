@@ -5394,11 +5394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\interview\\new\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\interview\\new\\OnlineFoodDeliverymanagement\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\2440012\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\interview\\new\\OnlineFoodDeliverymanagement\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5420,11 +5420,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj"
+            "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\interview\\new\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\interview\\new\\OnlineFoodDeliverymanagement\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
-              "projectPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj"
+            "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\interview\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj": {
+              "projectPath": "C:\\Users\\2440012\\OneDrive - Cognizant\\Desktop\\interview\\new\\OnlineFoodDeliverymanagement\\Testing\\Testing.csproj"
             }
           }
         }
@@ -5477,5 +5477,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

@@ -2,9 +2,11 @@
 using Domain.Models;
 using FoodDeliveryProject.DTOs;
 using Infrastructure.Interfaces;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -25,16 +27,35 @@ namespace FoodDeliveryProject.Controllers
 
 
         [AllowAnonymous]
-        [HttpPost]
-        public IActionResult CreateUser([FromQuery] UserDto userDto)
+        [HttpPost("register")]
+
+        public IActionResult CreateUser([FromBody] UserDto userDto)
         {
 
             var createdUser = userServices.CreateUser(userDto);
+
             if (createdUser == null)
             {
-                return NotFound("You dont have access to create admin");
+                return BadRequest(new { message = "You don't have access to create admin." });
             }
+
+            if (createdUser.Role == "duplicate")
+            {
+                return Conflict(new { message = "A user with this phone number is already registered." });
+            }
+
             return Ok(createdUser);
+        }
+        [AllowAnonymous]
+        [HttpPost("forgot-password")]
+        public IActionResult ForgotPassword([FromBody] ForgotPasswordDto dto)
+        {
+            var result = userServices.ForgotPassword(dto);
+
+            if (!result)
+                return NotFound(new { message = "No user found with this phone number." });
+
+            return Ok(new { message = "Password updated successfully." });
         }
 
 
@@ -44,7 +65,7 @@ namespace FoodDeliveryProject.Controllers
 
         [Authorize(Roles = "admin,customer,restaurant,deliveryagent")]
         [HttpPut("update/user")]
-        public IActionResult UpdateUser([FromQuery] UpdateUserDto userDto)
+        public IActionResult UpdateUser([FromBody] UpdateUserDto userDto)
         {
             if (!ModelState.IsValid)
             {
@@ -53,6 +74,7 @@ namespace FoodDeliveryProject.Controllers
             var updatedUser = userServices.UpdateUser(userDto);
             return Ok(updatedUser);
         }
+       
 
 
         //get all addresses by user phone number
@@ -69,14 +91,20 @@ namespace FoodDeliveryProject.Controllers
 
         //get all orders by user phone number
 
+        //[Authorize(Roles = "admin,customer")]
+        //[HttpGet("getorders")]
+        //public IActionResult GetOrdersByUserPhno([FromQuery]string phno)
+        //{
+        //    List<GetOrderDto> orders = userServices.GetOrdersByUserId(phno);
+        //    return Ok(orders);
+        //}
         [Authorize(Roles = "admin,customer")]
         [HttpGet("getorders")]
-        public IActionResult GetOrdersByUser([FromQuery]string phno)
+        public IActionResult GetOrdersByUserId([FromQuery] int userId)
         {
-            List<GetOrderDto> orders = userServices.GetOrdersByUserId(phno);
+            List<GetOrderDto> orders = userServices.GetOrdersByUserId(userId);
             return Ok(orders);
         }
-
 
         //delete user by phone number
 
@@ -93,6 +121,17 @@ namespace FoodDeliveryProject.Controllers
             {
                 return NotFound("User not found.");
             }
+        }
+
+        [HttpGet("get/userInfoById")]
+        public IActionResult GetUser(int userid)
+        {
+            UserInfoDto user = userServices.GetUserInfoByUserid(userid);
+            if (user == null)
+            {
+                return NotFound(new { message = "User not found" });
+            }
+            return Ok(user);
         }
 
 

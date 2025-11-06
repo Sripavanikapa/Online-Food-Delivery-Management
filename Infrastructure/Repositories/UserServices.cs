@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 
+
 namespace Infrastructure.Repositories
 {
     public class UserServices : IUserRepository
@@ -21,6 +22,12 @@ namespace Infrastructure.Repositories
             if(userdto.Role == "admin")
             {
                 return null;
+            }
+            var existingUser = _context.Users.FirstOrDefault(u => u.Phoneno == userdto.Phoneno);
+            if (existingUser != null)
+            {
+                
+                return new UserDto { Role = "duplicate" };
             }
             var user = new User
             {
@@ -58,25 +65,18 @@ namespace Infrastructure.Repositories
                 .Where(a => a.CustId == userId)
                 .Select(s=>new AddressDto
                 {
-                    Phno=s.Cust.Phoneno,
+                    
                     Address1 = s.Address1
                 }).ToList();
         }
-
-
-        //get orders by user id
-        public List<GetOrderDto> GetOrdersByUserId(string phno)
+        public List<GetOrderDto> GetOrdersByUserId(int userId)
         {
-            var userId = _context.Users
-                .Where(u => u.Phoneno == phno)
-                .Select(u => u.Id)
-                .FirstOrDefault();
-
             if (userId == 0)
                 return new List<GetOrderDto>();
 
             var orders = _context.Orders
                 .Where(o => o.UserId == userId)
+                .Include(o => o.User)
                 .Include(o => o.Restaurant)
                     .ThenInclude(r => r.User)
                 .ToList();
@@ -93,7 +93,9 @@ namespace Infrastructure.Repositories
                         ItemName = oi.Item.ItemName,
                         Price = oi.Item.Price,
                         Quantity = oi.Quantity,
-                        TotalItemPrice = oi.Item.Price * oi.Quantity
+                        TotalItemPrice = oi.Item.Price * oi.Quantity,
+                        ImageUrl=oi.Item.ImageUrl
+
                     })
                     .ToList();
 
@@ -104,12 +106,63 @@ namespace Infrastructure.Repositories
                     RestaurantName = order.Restaurant.User.Name,
                     CustomerName = order.User.Name,
                     TotalPrice = totalPrice,
-                    FoodItems = foodItems
+                    FoodItems = foodItems,
+                    Status=order.Status,
+                    CreatedAt=order.CreatedAt
                 });
             }
 
             return result;
         }
+
+
+        //get orders by user id
+        //public List<GetOrderDto> GetOrdersByUserPhno(string phno)
+        //{
+        //    var userId = _context.Users
+        //        .Where(u => u.Phoneno == phno)
+        //        .Select(u => u.Id)
+        //        .FirstOrDefault();
+
+        //    if (userId == 0)
+        //        return new List<GetOrderDto>();
+
+        //    var orders = _context.Orders
+        //        .Where(o => o.UserId == userId)
+        //        .Include(o => o.User)
+        //        .Include(o => o.Restaurant)
+        //            .ThenInclude(r => r.User)
+        //        .ToList();
+
+        //    var result = new List<GetOrderDto>();
+
+        //    foreach (var order in orders)
+        //    {
+        //        var foodItems = _context.OrderItems
+        //            .Where(oi => oi.OrderId == order.OrderId)
+        //            .Include(oi => oi.Item)
+        //            .Select(oi => new FoodDeliveryProject.DTOs.FoodItemDtoWithPrice
+        //            {
+        //                ItemName = oi.Item.ItemName,
+        //                Price = oi.Item.Price,
+        //                Quantity = oi.Quantity,
+        //                TotalItemPrice = oi.Item.Price * oi.Quantity
+        //            })
+        //            .ToList();
+
+        //        var totalPrice = foodItems.Sum(fi => fi.TotalItemPrice);
+
+        //        result.Add(new GetOrderDto
+        //        {
+        //            RestaurantName = order.Restaurant.User.Name,
+        //            CustomerName = order.User.Name,
+        //            TotalPrice = totalPrice,
+        //            FoodItems = foodItems
+        //        });
+        //    }
+
+        //    return result;
+        //}
 
 
         public UpdateUserDto UpdateUser(UpdateUserDto user)
@@ -119,7 +172,7 @@ namespace Infrastructure.Repositories
             {
                 existingAddress.Name = user.Name;
                 existingAddress.Phoneno = user.Phoneno;
-                existingAddress.Password = user.Password;
+                
 
                 _context.SaveChanges();
 
@@ -127,7 +180,7 @@ namespace Infrastructure.Repositories
                 {
                     Name = existingAddress.Name,
                     Phoneno = existingAddress.Phoneno,
-                    Password = existingAddress.Password,
+
                
                 };
             }
@@ -151,5 +204,46 @@ namespace Infrastructure.Repositories
 
 
 
+        public UserInfoDto GetUserInfoByUserid(int userid)
+        {
+            var user = _context.Users.Find(userid);
+            return new UserInfoDto
+            {
+                Phno = user.Phoneno,
+                Name = user.Name
+            };
+        }
+        public List<AddressShowing> GetAddressesByUserPhno(int userid)
+        {
+
+
+            var addresses = _context.Addresses
+                            .Where(a => a.CustId == userid)
+                            .Select(a => new AddressShowing
+                            {
+                                AddressId = a.AddressId,
+                                Address = a.Address1
+                            })
+                            .ToList();
+
+            if (addresses != null) return addresses;
+
+            return null;
+        }
+
+        public List<OrderedItemsByUserDto> GetOrderedItems(int userid)
+        {
+            throw new NotImplementedException();
+        }
+        public bool ForgotPassword(ForgotPasswordDto dto)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Phoneno == dto.Phoneno);
+            if (user == null)
+                return false;
+
+            user.Password = dto.NewPassword;
+            _context.SaveChanges();
+            return true;
+        }
     }
 }

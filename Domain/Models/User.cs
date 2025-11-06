@@ -16,7 +16,7 @@ public partial class User
    
     public required string Name { get; set; }
     
-    public required string Phoneno { get; set; }
+    public  string Phoneno { get; set; }
     
     public required string Password { get; set; }
     

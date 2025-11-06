@@ -19,5 +19,6 @@ namespace Domain.DTO
         public string Keywords { get; set; }
 
         public bool Status { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

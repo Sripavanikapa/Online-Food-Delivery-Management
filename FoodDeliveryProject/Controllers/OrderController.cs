@@ -47,7 +47,24 @@ namespace FoodDeliveryProject.Controllers
 
             return Ok(order);
         }
-      
 
+        [HttpGet("GetActiveOrders")]
+        public IActionResult GetActiveOrders(int id)
+        {
+            var orders = _order.GetActiveOrdersByAgentId(id);
+            if (orders == null || !orders.Any())
+                return NotFound("No active orders found.");
+
+            return Ok(orders);
+        }
+        [HttpPut("UpdateStatusToDelivered")]
+        public IActionResult UpdateStatusToDelivered(int orderId)
+        {
+            var updated = _order.UpdateOrderStatusToDelivered(orderId);
+            if (updated)
+                return Ok("Order status updated to Delivered.");
+            else
+                return NotFound("Order not found or already delivered.");
+        }
     }
 }

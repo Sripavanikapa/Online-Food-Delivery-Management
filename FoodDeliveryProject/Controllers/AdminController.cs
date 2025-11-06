@@ -105,30 +105,19 @@ namespace FoodDeliveryProject.Controllers
             return Ok(data);
         }
 
-        [Authorize(Roles = "admin")]
-        [HttpPost("AddCategory")]
-        public ActionResult AddCategory([FromBody] CategoryDto catagoryDto)
-        {
-            var category = categoryService.AddCategory(catagoryDto);
-            if (category == null)
-            {
-                return BadRequest("");
-            }
-            return Ok(category);
-        }
+        //[Authorize(Roles = "admin")]
+        //[HttpPost("AddCategory")]
+        //public ActionResult AddCategory([FromForm] CategoryDto catagoryDto)
+        //{
+        //    var category = categoryService.AddCategory(catagoryDto);
+        //    if (category == null)
+        //    {
+        //        return BadRequest("");
+        //    }
+        //    return Ok(category);
+        //}
 
-        [Authorize(Roles = "admin,customer,restaurant")]
-        [HttpGet("AllCategories")]
-        public ActionResult<List<string>> GetAllCategories()
-        {
-            List<string> categories = categoryService.GetAllCategories();
-            if (categories == null)
-            {
-                return NotFound($"No category found");
-            }
-            return Ok(categories);
-        }
-
+      
         [Authorize(Roles = "admin")]
         [HttpGet("getAllDeliveryAgents")]
         public IActionResult getDeliveryAgents()
@@ -165,6 +154,67 @@ namespace FoodDeliveryProject.Controllers
                 return StatusCode(500, new { message = ex.Message });
             }
         }
+        [HttpGet("/TotalRestaurants")]
 
+        public ActionResult<int> GetAllRestaurantsCount()
+
+        {
+
+            return admin.getAllRestaurantsCount();
+
+        }
+
+        [HttpGet("/TotalOrders")]
+
+        public ActionResult<int> GetAllOrdersCount()
+
+        {
+
+            return admin.getAllOrdersCount();
+
+        }
+        [Authorize(Roles = "admin, Admin")]
+
+        [HttpGet("top5")]
+
+        public ActionResult<List<RestaurantOrderCountDto>> GetTop5Restaurants()
+
+        {
+
+            var topRestaurants = admin.Top5Restaurant();
+
+            return Ok(topRestaurants);
+
+        }
+        [HttpGet("AllOrders")]
+
+        public IActionResult GetAllOrders()
+
+        {
+
+            var orders = admin.GetAllOrders(); // or directly call the method
+
+            return Ok(orders);
+
+        }
+        [HttpGet("AllCategories")]
+
+        public ActionResult<List<string>> GetAllCategories()
+
+        {
+
+            List<CategoryDto> categories = categoryService.GetAllCategories();
+
+            if (categories == null)
+
+            {
+
+                return NotFound($"No category found");
+
+            }
+
+            return Ok(categories);
+
+        }
     }
 }

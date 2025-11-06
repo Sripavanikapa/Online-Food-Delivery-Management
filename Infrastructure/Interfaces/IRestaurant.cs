@@ -21,6 +21,10 @@ namespace FoodDeliveryProject.Repositories
         public List<RestaurantWithFoodDto> RestaurantWithThereFoodItems();
 
         List<RestaurantDto> GetOpenRestaurants();
-        
+        public RestaurantDto GetRestaurantByUserId(int userId);
+        List<OrderHistoryDto> GetOrderHistoryForRestaurant(int restaurantId);
+
+
+
     }
 }

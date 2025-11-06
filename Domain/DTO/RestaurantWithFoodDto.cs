@@ -16,5 +16,6 @@ namespace Domain.DTO
         public string? OwnerName { get; set; }
 
         public virtual object  FoodItems { get; set; }
+        
     }
 }

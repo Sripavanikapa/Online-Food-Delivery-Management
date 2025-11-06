@@ -2,6 +2,8 @@
 using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using NUnit.Framework;
 using System.Linq;
 using System.Net;
 namespace Infrastructure.Repositories
@@ -13,67 +15,63 @@ namespace Infrastructure.Repositories
         {
             _context = context;
         }
-        
-        
+
+
         // Add a new address
         public string CreateAddress(AddressDto address)
         {
-            var custId = _context.Users
-                .Where(u => u.Phoneno == address.Phno)
-                .Select(u => u.Id)
-                .FirstOrDefault();
+            // Defensive check: ensure the user exists
+            var userExists = _context.Users.Any(u => u.Id == address.cust_id);
+            if (!userExists)
+            {
+                throw new Exception($"User with ID {address.cust_id} does not exist.");
+            }
+
             var newAddress = new Address
             {
-                CustId = custId,
+                CustId = address.cust_id,
                 Address1 = address.Address1
             };
+
             _context.Addresses.Add(newAddress);
             _context.SaveChanges();
 
             return newAddress.Address1;
-            
         }
 
-       //Update address
-        public string UpdateAddress(int addressid,AddressDto address)
-        {
-            var custId = _context.Users
-               .Where(u => u.Phoneno == address.Phno)
-               .Select(u => u.Id)
-               .FirstOrDefault();
-            var existingAddress = _context.Addresses.Find(addressid);
-            if (existingAddress != null)
-            {
-               
-                existingAddress.Address1 = address.Address1;
-               
-                _context.SaveChanges();
 
-                return existingAddress.Address1;
+        public string UpdateAddress(int addressId, string address)
+        {
+            var existing = _context.Addresses.FirstOrDefault(a => a.AddressId == addressId);
+            if (existing == null)
+            {
+                throw new Exception("Address not found");
             }
-            return null;
-            
+
+            existing.Address1 = address;
+            _context.SaveChanges();
+
+            return existing.Address1;
         }
 
 
         // Get addresses by customer ID
 
-        public List<AddressDto> GetAddressesByPhno(string phno) {
+        public List<AddressDto> GetAddressesByPhno(int userid)
+        {
 
-            var custId = _context.Users
-               .Where(u => u.Phoneno == phno)
-               .Select(u => u.Id)
-               .FirstOrDefault();
-            return _context.Addresses.Where(a => a.CustId == custId).Select(a => new AddressDto{
-                                            Address1 = a.Address1,
-                                            Phno=a.Cust.Phoneno
-       
-                                                    })
+            
+            return _context.Addresses.Where(a => a.CustId == userid).Select(a => new AddressDto
+            {
+                Address1 = a.Address1,
+                
+
+            })
                                             .ToList();
 
 
         }
-        
+
         public bool DeleteAddressById(int addressid)
         {
             var address = _context.Addresses.Find(addressid);
@@ -85,10 +83,10 @@ namespace Infrastructure.Repositories
             }
             return false;
         }
-            
+
+        public object UpdateAddress(int addressid, AddressDto address)
+        {
+            throw new NotImplementedException();
         }
-
-
-
-    
-}
+    }
+    }

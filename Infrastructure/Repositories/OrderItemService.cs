@@ -22,10 +22,9 @@ namespace FoodDeliveryProject.Repositories
                 .Where(oi => oi.OrderId == id && oi.Item != null)
                 .Select(oi => new OrderItemDto
                 {
-                    ItemName = oi.Item!.ItemName,
-                    Price = oi.Item.Price,
+                  
                     Quantity = oi.Quantity,
-                    TotalItemPrice = oi.Item.Price * oi.Quantity
+                   
                 })
                 .ToList();
 

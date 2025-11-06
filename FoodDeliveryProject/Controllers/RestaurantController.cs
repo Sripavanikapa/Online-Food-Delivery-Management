@@ -1,11 +1,14 @@
-﻿using Domain.DTO;
+﻿using Domain.Data;
+using Domain.DTO;
 using Domain.Models;
 using FoodDeliveryProject.Repositories;
 using Infrastructure.Interfaces;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -15,11 +18,13 @@ namespace FoodDeliveryProject.Controllers
     {
         private readonly IRestaurant restaurant;
         private readonly IFoodItems foodItems;
+        private readonly IOrder order;
 
-        public RestaurantController(IRestaurant restaurant,IFoodItems foodItems)
+        public RestaurantController(IRestaurant restaurant,IFoodItems foodItems,IOrder order)
         {
             this.restaurant=restaurant;
             this.foodItems = foodItems;
+            this.order = order;
         }
 
 
@@ -60,10 +65,10 @@ namespace FoodDeliveryProject.Controllers
         }
         [Authorize(Roles = "restaurant")]
         [HttpPut]
-        [Route("{id}/{status}")]
-        public IActionResult UpdateRestaurantStatus([FromRoute] int id, [FromRoute] bool status)
+        [Route("{id}/status")]
+        public IActionResult UpdateRestaurantStatus([FromRoute] int id, [FromBody] RestaurantStatusUpdateDto restaurantStatusUpdateDto)
         {
-            var updated=restaurant.UpdateRestaurantStatus(id, status);
+            var updated=restaurant.UpdateRestaurantStatus(id, restaurantStatusUpdateDto.Status);
             if (!updated)
             {
                 return NotFound(new { message = "Restaurant not found with that id" });
@@ -94,11 +99,13 @@ namespace FoodDeliveryProject.Controllers
             var createdFoodItem = foodItems.CreateFoodItem(foodItemCreateDto);
             return Ok(createdFoodItem);
         }
+      
+
         //update food items
         //this for there may be price change etc..
         [Authorize(Roles = "restaurant")]
         [HttpPut("update/fooditem")]
-        public IActionResult UpdateFoodItem([FromQuery] int foodid, [FromQuery] FoodItemDto fooddto)
+        public IActionResult UpdateFoodItem([FromForm] int foodid, [FromForm] FoodItemDto fooddto)
         {
             if (!ModelState.IsValid)
             {
@@ -152,5 +159,100 @@ namespace FoodDeliveryProject.Controllers
             }
             return Ok(restaurants);
         }
+        [AllowAnonymous]
+        [HttpGet("restaurant/{restaurantId}/incoming")]
+        //[Authorize(Roles = "restaurant")]
+        public IActionResult GetIncomingOrders(int restaurantId)
+        {
+            var orders = order.GetIncomingOrdersForRestaurant(restaurantId);
+            if (orders == null || !orders.Any())
+            {
+                return NotFound("No incoming orders found for this restaurant.");
+            }
+            return Ok(orders);
+        }
+        [AllowAnonymous]
+        [HttpPut("order/{orderId}/status")]
+        public IActionResult UpdateOrderStatus(int orderId, [FromBody] OrderStatusUpdateDto dto)
+        {
+            if (string.IsNullOrWhiteSpace(dto.Status))
+            {
+                return BadRequest("Status is required.");
+            }
+
+            var success = order.UpdateOrderStatus(orderId, dto.Status);
+            if (!success)
+            {
+                return NotFound($"Order with ID {orderId} not found.");
+            }
+
+            return Ok(new { message = $"Order {orderId} marked as {dto.Status}." });
+        }
+        [Authorize(Roles = "restaurant")]
+        [HttpPut("update-fooditem")]
+        public async Task<IActionResult> UpdateFoodItemWithImage([FromForm] int foodid, [FromForm] FoodItemDto dto, IFormFile image)
+        {
+            try
+            {
+                var updated = await foodItems.UpdateFoodItemWithImageAsync(foodid, dto, image);
+                if (updated == null)
+                    return NotFound("Food item not found.");
+
+                return Ok(new { message = "Food item updated successfully", data = updated });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+        }
+
+        [Authorize(Roles = "restaurant,deliveryagent")]
+        [HttpGet("me")]
+        public IActionResult GetMyRestaurant()
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var restaurantinfo = restaurant.GetRestaurantByUserId(userId);
+            if (restaurantinfo == null)
+            {
+                return NotFound("Restaurant not found for this user.");
+            }
+            return Ok(restaurantinfo);
+        }
+        [HttpPost("upload-fooditem")]
+        public async Task<IActionResult> UploadFoodItem([FromForm] FoodItemDto dto, IFormFile image)
+        {
+            var result = await foodItems.UploadFoodItemAsync(dto, image);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "restaurant")]
+        [HttpGet("order-history/{restaurantId}")]
+        public IActionResult GetOrderHistory(int restaurantId)
+        {
+            var history = restaurant.GetOrderHistoryForRestaurant(restaurantId);
+            if (history == null || !history.Any())
+                return NotFound("No order history found for this restaurant.");
+
+            return Ok(history);
+        }
+        [Authorize(Roles = "restaurant")]
+        [HttpPost("create-fooditem")]
+        public IActionResult CreateFoodItem([FromBody] FoodItemDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = foodItems.CreateFoodItem(dto);
+            if (result == null)
+            {
+                return BadRequest("Failed to create food item.");
+            }
+
+            return Ok(result);
+        }
+
+
     }
 }

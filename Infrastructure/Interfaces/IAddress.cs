@@ -11,11 +11,11 @@ namespace Infrastructure.Interfaces
     public interface IAddress
     {
         string CreateAddress(AddressDto addressDto);
-        List<AddressDto> GetAddressesByPhno(string phno);
+        List<AddressDto> GetAddressesByPhno(int userid);
 
-        string UpdateAddress( int addid,AddressDto addressDto);
+        string UpdateAddress(int addressId, string address);
 
         bool DeleteAddressById(int addressid);
-
+        object UpdateAddress(int addressid, AddressDto address);
     }
 }

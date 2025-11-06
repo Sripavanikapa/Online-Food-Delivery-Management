@@ -21,4 +21,5 @@ public partial class Delivery
     public virtual DeliveryAgent? Agent { get; set; }
 
     public virtual Order? Order { get; set; }
+    
 }

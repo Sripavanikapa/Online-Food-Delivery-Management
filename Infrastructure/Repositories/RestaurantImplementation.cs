@@ -59,12 +59,16 @@ namespace FoodDeliveryProject.Repositories
         public RestaurantDto GetRestaurantById(int id)
         {
             return appDbContext.Restaurants
+                
                  .Where(r => r.RestaurantId == id)
                  .Select(r => new RestaurantDto
                  {
                      RestaurantId = r.RestaurantId,
                      Status = r.Status,
-                     OwnerName = r.User.Name
+                     OwnerName = r.User.Name,
+                     IsValid=r.User.IsValid,
+
+                     Phoneno = r.User.Phoneno,
                  })
                  .FirstOrDefault();
 
@@ -126,7 +130,9 @@ namespace FoodDeliveryProject.Repositories
                         Rating = f.Rating,
                         Description = f.Description ?? string.Empty,
                         Keywords = f.Keywords ?? string.Empty,
-                        Status = f.Status
+                        Status = f.Status,
+                        ImageUrl = f.ImageUrl
+
                     }).ToList()
                     : "No food item"
             }).ToList();
@@ -145,6 +151,66 @@ namespace FoodDeliveryProject.Repositories
                 .ToList();
 
             return restaurants;
+        }
+
+        public RestaurantDto GetRestaurantByUserId(int userId)
+        {
+            var restaurant = appDbContext.Restaurants
+                .Include(r => r.User) 
+                .Include(r=>r.User.Addresses)
+                .FirstOrDefault(r => r.User.Id == userId); 
+
+            if (restaurant == null)
+            {
+                Console.WriteLine($"No restaurant found for userId: {userId}");
+                return null;
+            }
+
+            return new RestaurantDto
+            {
+                RestaurantId = restaurant.RestaurantId,
+                OwnerName = restaurant.User?.Name ?? "Unknown", 
+                Status = restaurant.Status,
+                Phoneno=restaurant.User.Phoneno,
+                IsValid=restaurant.User.IsValid,
+                Address=restaurant.User.Addresses.FirstOrDefault()?.Address1,
+            };
+        }
+        public List<OrderHistoryDto> GetOrderHistoryForRestaurant(int restaurantId)
+        {
+            var orders = appDbContext.Orders
+                .Where(o => o.RestaurantId == restaurantId)
+                .OrderByDescending(o => o.CreatedAt)
+                .ToList();
+
+            var result = new List<OrderHistoryDto>();
+
+            foreach (var order in orders)
+            {
+                var customer = appDbContext.Users.FirstOrDefault(u => u.Id == order.UserId);
+                var items = appDbContext.OrderItems
+                    .Where(oi => oi.OrderId == order.OrderId)
+                    .Join(appDbContext.FoodItems,
+                          oi => oi.ItemId,
+                          fi => fi.ItemId,
+                          (oi, fi) => new OrderedItemDto
+                          {
+                              ItemName = fi.ItemName,
+                              Quantity = oi.Quantity,
+                              Price = fi.Price
+                          }).ToList();
+
+                result.Add(new OrderHistoryDto
+                {
+                    OrderId = order.OrderId,
+                    CustomerName = customer?.Name ?? "Unknown",
+                    Status = order.Status,
+                    OrderDate=order.CreatedAt,
+                    Items = items
+                });
+            }
+
+            return result;
         }
 
 

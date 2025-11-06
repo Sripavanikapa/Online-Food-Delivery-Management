@@ -9,9 +9,10 @@ namespace Domain.DTO
     public class AddressDto
     {
 
-        public required string Phno { get; set; }
+        public int cust_id { get; set; }
 
-        public required string Address1 { get; set; }
+        public string Address1 { get; set; }
+       
 
     }
 }

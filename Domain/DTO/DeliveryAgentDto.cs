@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.DTO
+﻿public class DeliveryAgentDto
 {
-    public class DeliveryAgentDto
-    {
-        public int AgentId { get; set; }
-        //public bool Status { get; set; }
-    }
+    public int AgentId { get; set; }
+    public string AgentName { get; set; } = string.Empty;
+    public string Phoneno { get; set; } = string.Empty;
+    public bool IsValid { get; set; }
+    public bool IsActive { get; set; }
 }
+

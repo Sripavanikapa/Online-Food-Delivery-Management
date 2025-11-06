@@ -21,6 +21,9 @@ namespace Infrastructure.Interfaces
         //public object GetOrderByOrderId(int orderId);
 
         public GetOrderDto GetOrderByOrderId(int orderId);
-
+        public List<GetOrderDto> GetIncomingOrdersForRestaurant(int restaurantId);
+        bool UpdateOrderStatus(int orderId, string status);
+        public List<ActiveOrderDto> GetActiveOrdersByAgentId(int agentId);
+        public bool UpdateOrderStatusToDelivered(int orderId);
     }
 }

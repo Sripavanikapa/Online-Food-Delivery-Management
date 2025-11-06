@@ -1,18 +1,21 @@
 
 using Domain.Data;
+using Domain.Models;
 using FoodDeliveryProject.Repositories;
+using Infrastructure.Exceptions;
 using Infrastructure.Interfaces;
 using Infrastructure.JWT;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Net.Http;
 using System.Text;
-using Domain.Models;
-using Microsoft.Extensions.DependencyInjection;
+
 
 namespace FoodDeliveryProject
 {
@@ -68,7 +71,18 @@ namespace FoodDeliveryProject
 
             builder.Services.Configure<OpenRouteServiceConfig>(
                builder.Configuration.GetSection("OpenRouteService"));
+            builder.Services.AddScoped<ITrackingApiClient, TrackingApiClient>();
+            builder.Services.AddHttpClient<TrackingApiClient>();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    builder => builder
+                        .WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+            });
 
+           
 
             var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
             builder.Services.AddAuthentication(options =>
@@ -135,13 +149,15 @@ namespace FoodDeliveryProject
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseMiddleware<GlobalExceptionMiddleware>();
             app.UseHttpsRedirection();
+            app.UseCors("AllowReactApp");
             app.UseAuthentication();
             app.UseAuthorization();
 
 
             app.MapControllers();
+            app.UseStaticFiles();
 
             app.Run();
         }

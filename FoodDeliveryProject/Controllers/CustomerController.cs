@@ -7,6 +7,8 @@ using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace FoodDeliveryProject.Controllers
 {
@@ -20,8 +22,9 @@ namespace FoodDeliveryProject.Controllers
         private readonly IUserRepository userServices;
         private readonly IOrder order;
         private readonly IReview review;
+        private readonly IAddress addressService;
 
-        public CustomerController(IFoodItems foodItemsService,IUserRepository userService,IRestaurant restaurant,IUserRepository userServices,IOrder order,IReview review)
+        public CustomerController(IFoodItems foodItemsService,IUserRepository userService,IRestaurant restaurant,IUserRepository userServices,IOrder order,IReview review,IAddress addressService)
         {
             this.foodItemsService = foodItemsService;
             this.userService = userService;
@@ -29,6 +32,7 @@ namespace FoodDeliveryProject.Controllers
             this.userServices = userServices;
             this.order = order;
             this.review = review;
+            this.addressService = addressService;
         }
      
         [AllowAnonymous]//It allows any user, including unauthenticated ones, to access the endpoint.
@@ -43,6 +47,31 @@ namespace FoodDeliveryProject.Controllers
                 return NotFound("You dont have access to create admin");
             }
             return Ok(createdUser);
+        }
+        [Authorize(Roles = "customer,restaurant,deliveryagent")]
+        [HttpPost("Add/address")]
+        public IActionResult CreateAddress([FromQuery] AddressDto address)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var createdAddress = addressService.CreateAddress(address);
+            return Ok(createdAddress);
+        }
+
+
+        //update a address
+        [Authorize(Roles = "customer,restaurant,deliveryagent")]
+        [HttpPut("update/address")]
+        public IActionResult UpdateAddress([FromQuery] int addressid, [FromQuery] AddressDto address)
+        {
+            if (!ModelState.IsValid)
+            {
+                return NotFound(ModelState);
+            }
+            var updatedAddress = addressService.UpdateAddress(addressid, address);
+            return Ok(updatedAddress);
         }
         [Authorize(Roles = "admin,customer,restaurant,deliveryagent")]
         [HttpPut("update/userProfile")]
@@ -62,26 +91,52 @@ namespace FoodDeliveryProject.Controllers
            List<AddressDto> address = userServices.GetAddressesByUserId(phno);
             return Ok(address);
         }
-        [Authorize(Roles = "admin,customer")]
-        [HttpGet("Orders")]
-        public IActionResult GetOrdersByUser([FromQuery] string phno)
+        [Authorize(Roles = "customer,restaurant,deliveryagent")]
+        [HttpDelete("delete/address")]
+        public ActionResult DeleteAddressById([FromQuery] int id)
         {
-            List<GetOrderDto> orders = userServices.GetOrdersByUserId(phno);
-            return Ok(orders);
+            var result = addressService.DeleteAddressById(id);
+            if (result == false)
+            {
+                return BadRequest("Provided id is not found");
+            }
+            return Ok(result);
         }
-        [Authorize(Roles = "customer")]
+        //[Authorize(Roles = "admin,customer")]
+        //[HttpGet("Orders/{phno}")]
+        //public IActionResult GetOrdersByUserPhno([FromRoute] string phno)
+        //{
+        //    List<GetOrderDto> orders = userServices.GetOrdersByUserId(phno);
+        //    return Ok(orders);
+        //}
         [HttpPost("OrderNow")]
         public IActionResult AddingOrder([FromBody] AddOrderDto dto)
         {
-            if (dto.UserId <= 0 || dto.RestaurantId <= 0)
-            {
-                return BadRequest("Invalid order data.");
-            }
+
+
+
+
+
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
             order.AddOrder(dto);
-            return Ok("Order added successfully.");
+            return Ok("Order placed successfully");
         }
 
+
+        [Authorize(Roles = "customer,admin,restaurant")]
+        [HttpGet("YourOrderInfo/{id}")]
+        public IActionResult GetOrderByOrderId(int id)
+        {
+            var orders =order.GetOrderByOrderId(id);
+
+            if (orders == null)
+                return NotFound("Order not found.");
+
+            return Ok(orders);
+        }
         [HttpGet]
         public IActionResult GetRestaurants()
         {
@@ -125,6 +180,19 @@ namespace FoodDeliveryProject.Controllers
             IEnumerable<ReviewGetRestaurantDto> restaurants = review.GetRestaurantNameByRating(rating);
             return Ok(restaurants);
         }
+      
+        [HttpGet("Orders")]
+        public IActionResult GetOrdersByUserId(int userId)
+        {
+            List<GetOrderDto> orders = userServices.GetOrdersByUserId(userId);
+            if (orders == null || !orders.Any())
+            {
+                return NotFound("No orders found.");
+            }
+            return Ok(orders);
+        }
+
+
 
     }
 }
